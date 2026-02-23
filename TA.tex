@@ -78,7 +78,7 @@
 \usepackage{graphicx} % for images
 \usepackage{caption} % for customizing captions
 \usepackage{subcaption} % for sub-figures
-\usepackage{hyperref} % for hyperlinks
+
 \usepackage{tocloft} % for customizing table of contents
 \usepackage{titlesec} % for customizing titles
 \usepackage{lipsum} % for dummy text (lorem ipsum text)
@@ -103,6 +103,8 @@
 \usepackage{xcolor} % for color definitions
 \usepackage[title,titletoc]{appendix} % for appendix management
 \usepackage{csquotes} % for context-sensitive quotation facilities
+\usepackage[hidelinks]{hyperref} % for hyperlinks
+
 
 \setmainfont{Times New Roman} % set main font to Times New Roman
 \onehalfspacing % spasi 1.5
@@ -163,6 +165,23 @@
 \renewcommand{\listalgorithmname}{DAFTAR ALGORITMA}
 \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
 \renewcommand{\thealgorithm}{\thechapter.\arabic{algorithm}}
+
+% Create list of equations
+\newlistof{myequations}{equ}{DAFTAR PERSAMAAN}
+\setlength{\cftmyequationsnumwidth}{3em}
+\renewcommand{\cftmyequationsaftersnum}{\hspace{0.5em}}
+
+% Equation caption command (must be used inside numbered line)
+\newcommand{\eqcaption}[1]{%
+  \addcontentsline{equ}{myequations}
+  {\protect\numberline{\theequation}#1}
+}
+\makeatletter
+\renewcommand{\listofmyequations}{%
+  \chapter*{\centering\large\bfseries DAFTAR PERSAMAAN}
+  \@starttoc{equ}
+}
+\makeatother
 
 \renewcommand \cftchapdotsep{4.5} % Atur jarak titik-titik pada daftar isi
 
@@ -320,13 +339,16 @@
 \addtocontents{toc}{\protect\renewcommand{\protect\cftchapfont}{\protect\normalfont}}
 \addtocontents{toc}{\protect\renewcommand{\protect\cftchappagefont}{\protect\normalfont}}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftchapdotsep}}
+
+
 % ==========================================
 
 \input{1 Halaman Judul.tex}
 \input{2 Lembar Pengesahan.tex}
-\input{3 Lembar Pernyataan.tex}
-\input{4 Abstrak.tex}
-\input{5 Kata Pengantar.tex}
+\input{3 Pernyataan Orisinalitas.tex}
+\input{4 Pernyataan Penggunaan AI.tex}
+\input{5 Abstrak.tex}
+\input{6 Kata Pengantar.tex}
 % ==========================================
 % --- Atur margin halaman untuk double-sided format (bolak-balik) ---
 % --- Comment baris di bawah ini jika ingin tetap menggunakan single-sided format ---
@@ -343,14 +365,16 @@
 % ==========================================
 
 
-\input{6 Daftar Isi.tex}
-%\input{7 Daftar Lampiran.tex} % Optional. Daftar lampiran sudah ada di dalam daftar isi.
+\input{7 Daftar Isi.tex}
+%\input{7a Daftar Lampiran.tex} % Optional. Daftar lampiran sudah ada di dalam daftar isi.
 \input{8 Daftar Gambar.tex}
 \input{9 Daftar Tabel.tex}
-\input{10 Daftar Algoritma.tex}
-\input{11 Daftar Listing.tex}
-\input{12 Daftar Singkatan.tex}
+\input{10 Daftar Persamaan.tex}
+\input{11 Daftar Algoritma.tex}
+\input{12 Daftar Listing.tex}
 \input{13 Daftar Simbol.tex}
+\input{14 Daftar Singkatan.tex}
+
 
 % ==========================================
 % BAGIAN UTAMA DOKUMEN

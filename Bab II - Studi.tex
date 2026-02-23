@@ -174,22 +174,26 @@ Penomoran persamaan diletakkan di sebelah kanan, dan rumus ditulis dalam mode \t
 E = mc^2
 \label{eq:contoh1}
 \end{equation}
+\eqcaption{Persamaan Pertama}
 
 Contoh lain penulisan rumus matematika yang lebih kompleks dapat ditulis seperti pada Persamaan \ref{eq:rumus2}.
-
+Perlu diperhatikan bahwa jika rumus terdiri dari beberapa baris, nomor persamaan hanya diletakkan pada baris terakhir, bukan pada setiap baris.
 \begin{align}
-f(x) &= ax^2 + bx + c \\
+f(x) &= ax^2 + bx + c \notag \\ % tidak menampilkan nomor pada baris ini
 f'(x) &= \frac{d}{dx}(ax^2 + bx + c) \notag \\ % tidak menampilkan nomor pada baris ini
-      &= 2ax + b \label{eq:rumus2}
+      &= 2ax + b 
+      \label{eq:rumus2} % nomor hanya muncul pada baris terakhir
 \end{align}
+\eqcaption{Persamaan Kedua}
 
 Jika rumus terlalu panjang untuk ditulis dalam satu baris, gunakan lingkungan \textit{multline} seperti pada Persamaan \ref{eq:rumus3} di bawah ini.
 \begin{multline} 
 y = a_0 + a_1x + a_2x^2 + a_3x^3 + a_4x^4 + a_5x^5 + a_6x^6 + a_7x^7 \\
     + a_8x^8 + a_9x^9 + a_{10}x^{10} \label{eq:rumus3}
 \end{multline}
+\eqcaption{Persamaan Ketiga}
 
-Jika ada penurunan rumus yang terdiri dari beberapa baris, namun tidak memerlukan penomoran pada setiap baris, gunakan lingkungan \textit{align*}, misalnya:
+Jika ada penurunan rumus yang terdiri dari beberapa baris, namun tidak memerlukan penomoran pada setiap baris dan tidak masuk di daftar persamaan, gunakan lingkungan \textit{align*}, misalnya:
 
 \begin{align*} 
 S &= \sum_{i=1}^{n} i^2 \\
@@ -201,6 +205,7 @@ S &= \sum_{i=1}^{n} i^2 \\
         &= \frac{1}{q - p} \left[ \frac{a}{3}x^3 + \frac{b}{2}x^2 + cx \right]_p^q \\
         &= \frac{a(q^3 - p^3)}{3(q - p)} + \frac{b(q^2 - p^2)}{2(q - p)} + c \label{eq:rumus4}
 \end{align*}
+
 
 
 
