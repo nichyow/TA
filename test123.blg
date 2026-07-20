@@ -1,0 +1,24 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'test123.blg'
+[76] biber-MSWIN64:342> INFO - === 
+[105] Biber.pm:421> INFO - Reading 'test123.bcf'
+[236] Biber.pm:1002> INFO - Found 7 citekeys in bib section 0
+[246] Biber.pm:4487> INFO - Processing section 0
+[266] Biber.pm:4678> INFO - Looking for bibtex file 'daftar-pustaka.bib' for section 0
+[315] bibtex.pm:1713> INFO - LaTeX decoding ...
+[338] bibtex.pm:1519> INFO - Found BibTeX data source 'daftar-pustaka.bib'
+[354] UCollate.pm:68> INFO - Overriding locale 'indonesian' defaults 'variable = shifted' with 'variable = non-ignorable'
+[354] UCollate.pm:68> INFO - Overriding locale 'indonesian' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[356] UCollate.pm:68> INFO - Overriding locale 'indonesian' defaults 'level = 4' with 'level = 2'
+[356] Biber.pm:4307> INFO - Sorting list 'cms/global//global/global/global' of type 'entry' with template 'cms' and locale 'indonesian'
+[356] Biber.pm:4313> INFO - No sort tailoring available for locale 'indonesian'
+[357] bbl.pm:676> INFO - Writing 'test123.bbl' with encoding 'UTF-8'
+[357] bbl.pm:779> INFO - Output to test123.bbl
+[358] Biber.pm:132> WARN - I didn't find a database entry for 'ismail2022iot' (section 0)
+[358] Biber.pm:132> WARN - I didn't find a database entry for 'kumar2024iot' (section 0)
+[358] Biber.pm:132> WARN - I didn't find a database entry for 'low2022scada' (section 0)
+[358] Biber.pm:132> WARN - I didn't find a database entry for 'azhar2022pwa' (section 0)
+[358] Biber.pm:132> WARN - I didn't find a database entry for 'brooke1996sus' (section 0)
+[358] Biber.pm:132> WARN - I didn't find a database entry for 'sauro2011sus' (section 0)
+[358] Biber.pm:132> WARN - I didn't find a database entry for 'bangor2009sus' (section 0)
+[358] Biber.pm:134> INFO - WARNINGS: 7

@@ -1,0 +1,661 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{cms/global//global/global/global}
+    \entry{alshami2024iot}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=d18c21923247e282aaa9f29a30edba02}{%
+           family={Alshami},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ada273ce4effa2c558906efe3fc2386c}{%
+           family={Ali},
+           familyi={A\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ad616dea11c894e5fd47c51cb54d4e9d}{%
+           family={Elsayed},
+           familyi={E\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c0377254a9af5a89660d62db5529038}{%
+           family={Eltoukhy},
+           familyi={E\bibinitperiod},
+           given={A.\bibnamedelimi E.\bibnamedelimi E.},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=26d36c9887858cc688142f96ae27917b}{%
+           family={Zayed},
+           familyi={Z\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9328c2372412b8a7ded12777fb6fa235}
+      \strng{fullhash}{63614fc513dddf5e02f4c1537c5e4982}
+      \strng{fullhashraw}{63614fc513dddf5e02f4c1537c5e4982}
+      \strng{bibnamehash}{63614fc513dddf5e02f4c1537c5e4982}
+      \strng{authorbibnamehash}{63614fc513dddf5e02f4c1537c5e4982}
+      \strng{authornamehash}{9328c2372412b8a7ded12777fb6fa235}
+      \strng{authorfullhash}{63614fc513dddf5e02f4c1537c5e4982}
+      \strng{authorfullhashraw}{63614fc513dddf5e02f4c1537c5e4982}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{{IoT} Innovations in Sustainable Water and Wastewater Management and Water Quality Monitoring: A Comprehensive Review of Advancements, Implications, and Future Directions}
+      \field{volume}{12}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2024.3392573
+      \endverb
+    \endentry
+    \entry{azhar2022pwa}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2736bad175da58f0994e295b4b079590}{%
+           family={Azhar},
+           familyi={A\bibinitperiod},
+           given={H.\bibnamedelimi B.},
+           giveni={H\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{14d84b826ba8659422b226f370441de4}
+      \strng{fullhash}{14d84b826ba8659422b226f370441de4}
+      \strng{fullhashraw}{14d84b826ba8659422b226f370441de4}
+      \strng{bibnamehash}{14d84b826ba8659422b226f370441de4}
+      \strng{authorbibnamehash}{14d84b826ba8659422b226f370441de4}
+      \strng{authornamehash}{14d84b826ba8659422b226f370441de4}
+      \strng{authorfullhash}{14d84b826ba8659422b226f370441de4}
+      \strng{authorfullhashraw}{14d84b826ba8659422b226f370441de4}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2022 E-Health and Bioengineering Conference (EHB)}
+      \field{title}{Progressive Web App for Real-Time Doctor-Patient Communication and Searchable Health Conditions}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1109/EHB55594.2022.9991490
+      \endverb
+    \endentry
+    \entry{bangor2009sus}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=05ed7926f59ed51998e7d806c8a2ca30}{%
+           family={Bangor},
+           familyi={B\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=221e957dde9bcf783fdee858cf2b365e}{%
+           family={Kortum},
+           familyi={K\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bff0e87eeab4ba1e74ae3e776e15d490}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{069c4734e30da9449cee720f93eda80e}
+      \strng{fullhash}{069c4734e30da9449cee720f93eda80e}
+      \strng{fullhashraw}{069c4734e30da9449cee720f93eda80e}
+      \strng{bibnamehash}{069c4734e30da9449cee720f93eda80e}
+      \strng{authorbibnamehash}{069c4734e30da9449cee720f93eda80e}
+      \strng{authornamehash}{069c4734e30da9449cee720f93eda80e}
+      \strng{authorfullhash}{069c4734e30da9449cee720f93eda80e}
+      \strng{authorfullhashraw}{069c4734e30da9449cee720f93eda80e}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{Journal of Usability Studies}
+      \field{title}{Determining What Individual {SUS} Scores Mean: Adding an Adjective Rating Scale}
+      \field{year}{2009}
+    \endentry
+    \entry{brooke1996sus}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=813064283275c281401d7a7483420c67}{%
+           family={Brooke},
+           familyi={B\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=f4dd6dd0057b9630f3f5689c42ce3347}{%
+           family={Jordan},
+           familyi={J\bibinitperiod},
+           given={Patrick\bibnamedelima W.},
+           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=d72440e8326b04d0098a1a8e6ccab8bd}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Bruce},
+           giveni={B\bibinitperiod}}}%
+        {{hash=d5d6227df47b81a791920b374329845f}{%
+           family={Weerdmeester},
+           familyi={W\bibinitperiod},
+           given={Bernard\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=8b8a10905f0d3cfa60d8b1742260677d}{%
+           family={McClelland},
+           familyi={M\bibinitperiod},
+           given={Ian\bibnamedelima L.},
+           giveni={I\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{813064283275c281401d7a7483420c67}
+      \strng{fullhash}{813064283275c281401d7a7483420c67}
+      \strng{fullhashraw}{813064283275c281401d7a7483420c67}
+      \strng{bibnamehash}{813064283275c281401d7a7483420c67}
+      \strng{authorbibnamehash}{813064283275c281401d7a7483420c67}
+      \strng{authornamehash}{813064283275c281401d7a7483420c67}
+      \strng{authorfullhash}{813064283275c281401d7a7483420c67}
+      \strng{authorfullhashraw}{813064283275c281401d7a7483420c67}
+      \strng{editorbibnamehash}{1f118ef59be4c83c1135d791c19f0daf}
+      \strng{editornamehash}{161df31cfda2ca59b22c7e189ab9aca4}
+      \strng{editorfullhash}{1f118ef59be4c83c1135d791c19f0daf}
+      \strng{editorfullhashraw}{1f118ef59be4c83c1135d791c19f0daf}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Usability Evaluation in Industry}
+      \field{title}{{SUS}—{A} Quick and Dirty Usability Scale}
+      \field{year}{1996}
+    \endentry
+    \entry{forhad2024wtp}{article}{}{}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=af04536594f5b56f040ee694b31dcf4f}{%
+           family={Forhad},
+           familyi={F\bibinitperiod},
+           given={H.\bibnamedelimi M.},
+           giveni={H\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=581de16e19ce9a710cb530001607e678}{%
+           family={Uddin},
+           familyi={U\bibinitperiod},
+           given={Md.\bibnamedelimi Ripaj},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=19e8de82d72618d94c239f1836d0f8d1}{%
+           family={Chakrovorty},
+           familyi={C\bibinitperiod},
+           given={R.\bibnamedelimi S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ed48915c823b1845e54d688d4920f94c}{%
+           family={Ruhul},
+           familyi={R\bibinitperiod},
+           given={A.\bibnamedelimi M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5ef18d81eb26a41fb5e74b332b09bdc8}{%
+           family={Faruk},
+           familyi={F\bibinitperiod},
+           given={H.\bibnamedelimi M.},
+           giveni={H\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c0e36e3ebc666e3353d449db829560b}{%
+           family={Kamruzzaman},
+           familyi={K\bibinitperiod},
+           given={Sarker},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8729b7a0c708ec8e27d5ca7f848fed0}{%
+           family={Sharmin},
+           familyi={S\bibinitperiod},
+           given={Nahid},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=78947ade99fe60e53def849c52c6f667}{%
+           family={Jamal},
+           familyi={J\bibinitperiod},
+           given={A.\bibnamedelimi H.\bibnamedelimi M.\bibnamedelimi Shofiul\bibnamedelimb Islam\bibnamedelima Molla},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f4490884337e3da257759c3766f9ed0f}{%
+           family={Haque},
+           familyi={H\bibinitperiod},
+           given={Md.\bibnamedelimi Mezba-Ul},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinithyphendelim U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c171b4419f9b00ccf2a750056cf8353}{%
+           family={Morshed},
+           familyi={M\bibinitperiod},
+           given={A.\bibnamedelimi K.\bibnamedelimi M.\bibnamedelimi M.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1bceff42261dc0ecdb1904c0458dd663}
+      \strng{fullhash}{55cd02d748d1aeb9ae7097f1a0733acd}
+      \strng{fullhashraw}{55cd02d748d1aeb9ae7097f1a0733acd}
+      \strng{bibnamehash}{55cd02d748d1aeb9ae7097f1a0733acd}
+      \strng{authorbibnamehash}{55cd02d748d1aeb9ae7097f1a0733acd}
+      \strng{authornamehash}{1bceff42261dc0ecdb1904c0458dd663}
+      \strng{authorfullhash}{55cd02d748d1aeb9ae7097f1a0733acd}
+      \strng{authorfullhashraw}{55cd02d748d1aeb9ae7097f1a0733acd}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{Heliyon}
+      \field{title}{{IoT} based real-time water quality monitoring system in water treatment plants ({WTPs})}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.1016/j.heliyon.2024.e40746
+      \endverb
+    \endentry
+    \entry{ismail2022iot}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=e6dfa021ab2b30eb31c2437668d0d1c0}{%
+           family={Ismail},
+           familyi={I\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0550e13ba4fc1c1703dfb695ccc24654}{%
+           family={Dawoud},
+           familyi={D\bibinitperiod},
+           given={D.\bibnamedelimi W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=078c0a686a6f52de76efd6982d6c3470}{%
+           family={Ismail},
+           familyi={I\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=48351ed802f650b1dc33670842684570}{%
+           family={Marsh},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d18c21923247e282aaa9f29a30edba02}{%
+           family={Alshami},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{90472ce61a7ae0329a5033078827d058}
+      \strng{fullhash}{00173154d02622bbaae5a11b472b82e4}
+      \strng{fullhashraw}{00173154d02622bbaae5a11b472b82e4}
+      \strng{bibnamehash}{00173154d02622bbaae5a11b472b82e4}
+      \strng{authorbibnamehash}{00173154d02622bbaae5a11b472b82e4}
+      \strng{authornamehash}{90472ce61a7ae0329a5033078827d058}
+      \strng{authorfullhash}{00173154d02622bbaae5a11b472b82e4}
+      \strng{authorfullhashraw}{00173154d02622bbaae5a11b472b82e4}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{{IoT}-Based Water Management Systems: Survey and Future Research Direction}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2022.3163742
+      \endverb
+    \endentry
+    \entry{kementerian2023permenkes}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6a2caf95566f00c5aabad4522459ec99}{%
+           family={{Kementerian Kesehatan Republik Indonesia}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{6a2caf95566f00c5aabad4522459ec99}
+      \strng{fullhash}{6a2caf95566f00c5aabad4522459ec99}
+      \strng{fullhashraw}{6a2caf95566f00c5aabad4522459ec99}
+      \strng{bibnamehash}{6a2caf95566f00c5aabad4522459ec99}
+      \strng{authorbibnamehash}{6a2caf95566f00c5aabad4522459ec99}
+      \strng{authornamehash}{6a2caf95566f00c5aabad4522459ec99}
+      \strng{authorfullhash}{6a2caf95566f00c5aabad4522459ec99}
+      \strng{authorfullhashraw}{6a2caf95566f00c5aabad4522459ec99}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Berita Negara Republik Indonesia Tahun 2023 Nomor 55}
+      \field{month}{1}
+      \field{title}{Peraturan Menteri Kesehatan Nomor 2 Tahun 2023 tentang Peraturan Pelaksanaan Peraturan Pemerintah Nomor 66 Tahun 2014 tentang Kesehatan Lingkungan}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://peraturan.bpk.go.id/Details/245563/permenkes-no-2
+      \endverb
+      \verb{url}
+      \verb https://peraturan.bpk.go.id/Details/245563/permenkes-no-2
+      \endverb
+      \warn{\item misc entry 'kementerian2023permenkes' (daftar-pustaka.bib): Invalid format '2026-07-5' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{kumar2024iot}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=67017c3b89ada3ed3b5b6a4d55248134}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=70bdc1ea5f8683abeb9fbeb80263d83f}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3e8dea8c685949631532a9eddb35edfa}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5cb0c635e152e25973d5bd90674caac1}{%
+           family={Chakrabarti},
+           familyi={C\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6604dee4431c48044bbb6b1722c0178a}{%
+           family={Chakrabarti},
+           familyi={C\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e47151fbfde1cc723b089924e9e52a69}{%
+           family={Margala},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{638b87d3c8b63b69da85c8e5e0d4f907}
+      \strng{fullhash}{033ea5578ad093f025d7376ce13f0c3f}
+      \strng{fullhashraw}{033ea5578ad093f025d7376ce13f0c3f}
+      \strng{bibnamehash}{033ea5578ad093f025d7376ce13f0c3f}
+      \strng{authorbibnamehash}{033ea5578ad093f025d7376ce13f0c3f}
+      \strng{authornamehash}{638b87d3c8b63b69da85c8e5e0d4f907}
+      \strng{authorfullhash}{033ea5578ad093f025d7376ce13f0c3f}
+      \strng{authorfullhashraw}{033ea5578ad093f025d7376ce13f0c3f}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{{IoT}-Enabled Advanced Water Quality Monitoring System for Pond Management and Environmental Conservation}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2024.3391807
+      \endverb
+    \endentry
+    \entry{linsley_tanstack}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=79ff695458dcac7a403246997c1fc822}{%
+           family={Linsley},
+           familyi={L\bibinitperiod},
+           given={Tanner},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c693c43f53c357998887436a69587e5}{%
+           family={{TanStack Contributors}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{8235f48cf4077c3c3c4a1c107cb1f513}
+      \strng{fullhash}{8235f48cf4077c3c3c4a1c107cb1f513}
+      \strng{fullhashraw}{8235f48cf4077c3c3c4a1c107cb1f513}
+      \strng{bibnamehash}{8235f48cf4077c3c3c4a1c107cb1f513}
+      \strng{authorbibnamehash}{8235f48cf4077c3c3c4a1c107cb1f513}
+      \strng{authornamehash}{8235f48cf4077c3c3c4a1c107cb1f513}
+      \strng{authorfullhash}{8235f48cf4077c3c3c4a1c107cb1f513}
+      \strng{authorfullhashraw}{8235f48cf4077c3c3c4a1c107cb1f513}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{TanStack Query: Powerful Asynchronous State Management}
+      \field{urlday}{10}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tanstack.com/query
+      \endverb
+      \verb{url}
+      \verb https://tanstack.com/query
+      \endverb
+    \endentry
+    \entry{low2022scada}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=e7bc53aafa45f9b4b21b2b62168388a7}{%
+           family={Low},
+           familyi={L\bibinitperiod},
+           given={J.\bibnamedelimi Y.},
+           giveni={J\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=101c8a3be5b36f9a4dc4a313132095f9}{%
+           family={Manaf},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=872218d3905fb72c4cad11911515f649}{%
+           family={Sahlan},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e6b49e43fef881dea3f0a0bca26297b4}{%
+           family={Nawawi},
+           familyi={N\bibinitperiod},
+           given={S.\bibnamedelimi W.},
+           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=770f88e15a3558c11e0e2dc7bf54880d}{%
+           family={Rosli},
+           familyi={R\bibinitperiod},
+           given={K.\bibnamedelimi I.},
+           giveni={K\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fb73b935f140b6fd845ce881726aa738}
+      \strng{fullhash}{c0cf8a664c107662e7009a41c9674263}
+      \strng{fullhashraw}{c0cf8a664c107662e7009a41c9674263}
+      \strng{bibnamehash}{c0cf8a664c107662e7009a41c9674263}
+      \strng{authorbibnamehash}{c0cf8a664c107662e7009a41c9674263}
+      \strng{authornamehash}{fb73b935f140b6fd845ce881726aa738}
+      \strng{authorfullhash}{c0cf8a664c107662e7009a41c9674263}
+      \strng{authorfullhashraw}{c0cf8a664c107662e7009a41c9674263}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2022 IEEE 8th International Conference on Smart Instrumentation, Measurement and Applications (ICSIMA)}
+      \field{title}{Web-Based Monitoring and Control of A Lab-Scaled Water Distribution System}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1109/ICSIMA56466.2022.9965038
+      \endverb
+    \endentry
+    \entry{rahu2023iot}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=e362c9a8df78890241d614a955a20748}{%
+           family={Rahu},
+           familyi={R\bibinitperiod},
+           given={M.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c351b04aaaeed6da4f473166b923a35e}{%
+           family={Chandio},
+           familyi={C\bibinitperiod},
+           given={A.\bibnamedelimi F.},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e54dd9279132e52a139bc4e43dd020f8}{%
+           family={Aurangzeb},
+           familyi={A\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=876644bbcb28225856d46958182102ce}{%
+           family={Karim},
+           familyi={K\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5fe26623a94c9d6ee4266f8ec20adc6a}{%
+           family={Alhussein},
+           familyi={A\bibinitperiod},
+           given={M.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dc3cb2c0e14837f4540c7921fb1f74ac}{%
+           family={Anwar},
+           familyi={A\bibinitperiod},
+           given={M.\bibnamedelimi S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{44fc50f88d0d0e8689fd7769d2f36be3}
+      \strng{fullhash}{9334427dcd0111cd8067fa92c1f607ec}
+      \strng{fullhashraw}{9334427dcd0111cd8067fa92c1f607ec}
+      \strng{bibnamehash}{9334427dcd0111cd8067fa92c1f607ec}
+      \strng{authorbibnamehash}{9334427dcd0111cd8067fa92c1f607ec}
+      \strng{authornamehash}{44fc50f88d0d0e8689fd7769d2f36be3}
+      \strng{authorfullhash}{9334427dcd0111cd8067fa92c1f607ec}
+      \strng{authorfullhashraw}{9334427dcd0111cd8067fa92c1f607ec}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Toward Design of Internet of Things and Machine Learning-Enabled Frameworks for Analysis and Prediction of Water Quality}
+      \field{volume}{11}
+      \field{year}{2023}
+      \field{pages}{101055\bibrangedash 101086}
+      \range{pages}{32}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2023.3315649
+      \endverb
+    \endentry
+    \entry{sauro2011sus}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f24e1723133e0393dfd185716f640bed}{%
+           family={Sauro},
+           familyi={S\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Denver, CO}%
+      }
+      \list{publisher}{1}{%
+        {Measuring Usability LLC}%
+      }
+      \strng{namehash}{f24e1723133e0393dfd185716f640bed}
+      \strng{fullhash}{f24e1723133e0393dfd185716f640bed}
+      \strng{fullhashraw}{f24e1723133e0393dfd185716f640bed}
+      \strng{bibnamehash}{f24e1723133e0393dfd185716f640bed}
+      \strng{authorbibnamehash}{f24e1723133e0393dfd185716f640bed}
+      \strng{authornamehash}{f24e1723133e0393dfd185716f640bed}
+      \strng{authorfullhash}{f24e1723133e0393dfd185716f640bed}
+      \strng{authorfullhashraw}{f24e1723133e0393dfd185716f640bed}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Practical Guide to the System Usability Scale: Background, Benchmarks \& Best Practices}
+      \field{year}{2011}
+    \endentry
+    \entry{vercel_nextjs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a5ffd881cacb3404ccac7e94415ab626}{%
+           family={{Vercel Inc.}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5ffd881cacb3404ccac7e94415ab626}
+      \strng{fullhash}{a5ffd881cacb3404ccac7e94415ab626}
+      \strng{fullhashraw}{a5ffd881cacb3404ccac7e94415ab626}
+      \strng{bibnamehash}{a5ffd881cacb3404ccac7e94415ab626}
+      \strng{authorbibnamehash}{a5ffd881cacb3404ccac7e94415ab626}
+      \strng{authornamehash}{a5ffd881cacb3404ccac7e94415ab626}
+      \strng{authorfullhash}{a5ffd881cacb3404ccac7e94415ab626}
+      \strng{authorfullhashraw}{a5ffd881cacb3404ccac7e94415ab626}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Next.js: The React Framework for the Web}
+      \field{urlday}{10}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://nextjs.org/docs
+      \endverb
+      \verb{url}
+      \verb https://nextjs.org/docs
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

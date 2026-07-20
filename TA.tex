@@ -1,4 +1,4 @@
-%! TEX program = xelatex
+% !TeX root = TA.tex
 % 
 % Versi 1.1
 %
@@ -82,8 +82,25 @@
 \usepackage{tocloft} % for customizing table of contents
 \usepackage{titlesec} % for customizing titles
 \usepackage{lipsum} % for dummy text (lorem ipsum text)
-\usepackage{floatrow} % for customizing float (figure and table) positions
+\usepackage{floatrow} % for customizing float (figure and table) positions; also handles [H] placement
 \usepackage{listings} % for code listing
+% Definisi bahasa JavaScript manual (workaround: versi listings.sty terbaru di MiKTeX
+% tidak lagi menyertakan definisi bawaan untuk "JavaScript").
+\lstdefinelanguage{JavaScript}{
+    keywords={break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, finally, for, function, if, import, in, instanceof, interface, let, new, return, super, switch, this, throw, try, typeof, var, void, while, with, yield, async, await, of, static, get, set},
+    keywordstyle=\color{blue}\bfseries,
+    ndkeywords={true, false, null, undefined, NaN, Infinity},
+    ndkeywordstyle=\color{purple}\bfseries,
+    identifierstyle=\color{black},
+    sensitive=true,
+    comment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    commentstyle=\color{gray}\ttfamily,
+    stringstyle=\color{codepurple},
+    morestring=[b]',
+    morestring=[b]",
+    morestring=[b]`
+}
 \usepackage{amsmath} % for math
 \usepackage{amssymb} % for math symbols
 \usepackage[shortlabels]{enumitem} % for customizing lists
@@ -96,7 +113,6 @@
 \usepackage{algorithmicx} % for algorithmic environment
 \usepackage{algpseudocode} % for pseudocode
 \usepackage{microtype} % Untuk optimasi typography dan spacing
-\usepackage{floatrow} % for customizing float (figure and table) positions
 \usepackage{array} % for better arrays (eg. in tabular environment)
 \usepackage{threeparttable} % for tables with notes
 \usepackage{tabularx} % for tables with adjustable-width columns
@@ -104,6 +120,9 @@
 \usepackage[title,titletoc]{appendix} % for appendix management
 \usepackage{csquotes} % for context-sensitive quotation facilities
 \usepackage[hidelinks]{hyperref} % for hyperlinks
+\usepackage{multirow} % for merging table cells across rows
+\usepackage{tikz} % for drawing diagrams
+\usetikzlibrary{arrows.meta, positioning} % tikz libraries for arrows and node positioning
 
 
 \setmainfont{Times New Roman} % set main font to Times New Roman
@@ -194,7 +213,7 @@
 \setlength{\cftsubsecindent}{4.2em}
 \setlength{\cftsubsecnumwidth}{2.8em}
 \setlength{\cftsubsubsecindent}{7.0em}
-\setlength{\cftsubsubsecnumwidth}{3.2em}
+\setlength{\cftsubsubsecnumwidth}{3.5em}
 
 % --- Ubah nama bulan ke Bahasa Indonesia ---
 \renewcommand*{\DTMbahasaimonthname}[1]{%
@@ -223,13 +242,16 @@
       bottom=3cm
 }
 
+% --- Jangan paksa halaman rata ke margin bawah (hindari jarak antar-paragraf melar) ---
+\raggedbottom
+
 % --- LISTINGS STYLE FOR PYTHON CODE ---
 % --- Silakan diubah sesuai selera dan kebutuhan ---
 % Define colors for syntax highlighting
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
 
 % Configure listings style
 \lstdefinestyle{pythonstyle}{
@@ -369,11 +391,11 @@
 %\input{7a Daftar Lampiran.tex} % Optional. Daftar lampiran sudah ada di dalam daftar isi.
 \input{8 Daftar Gambar.tex}
 \input{9 Daftar Tabel.tex}
-\input{10 Daftar Persamaan.tex}
-\input{11 Daftar Algoritma.tex}
+%\input{10 Daftar Persamaan.tex} % dihapus atas permintaan
+%\input{11 Daftar Algoritma.tex} % dihapus atas permintaan
 \input{12 Daftar Listing.tex}
-\input{13 Daftar Simbol.tex}
-\input{14 Daftar Singkatan.tex}
+%\input{13 Daftar Simbol.tex} % dihapus atas permintaan
+%\input{14 Daftar Singkatan.tex} % dihapus atas permintaan
 
 
 % ==========================================
@@ -420,7 +442,7 @@
   %\renewcommand{\thechapter}{\@Alph\c@chapter} 
   %\makeatother
 \input{Lampiran-A.tex}
-\input{Lampiran-B.tex}
+%\input{Lampiran-B.tex} % dihapus atas permintaan
 \end{appendices}
 \backmatter
 

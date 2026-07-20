@@ -2,79 +2,166 @@
 % BAB VI EVALUASI
 % ==========================================
 \cleardoublepage
-\chapter{EVALUASI}
-\label{chap:evaluasi}
-asdfasdf
-\section{Metode Evaluasi}
-asdfasdf
-\section{Hasil Evaluasi}
-asdfasdf
-\section{Pembahasan Hasil Evaluasi}
-\section{Evaluasi Kesalahan Penulisan yang Sering Terjadi}
-\subsection{Penggunaan Kata "di mana" atau "dimana"}
-Banyak yang menuliskan kata "di mana" atau "dimana" sebagai pengganti kata "which" dalam bahasa Inggris. 
-Padahal, penggunaan kata "di mana" atau "dimana" tidak tepat dalam konteks tersebut. Demikian juga untuk kata serupa, misalnya "yang mana".
-Kata "di mana" atau "dimana" ini harus diganti dengan kata lain, seperti "dengan", "tempat", "yang", dan sebagainya tergantung kalimatnya.
-Penjelasan lengkap dapat dilihat pada \autocite{BPBI}.
+\chapter{EVALUASI SISTEM}
+\label{chap:evaluasi-sistem}
 
-\subsection{Penggunaan Kata "sedangkan" dan "sehingga"}
+Bab ini membahas evaluasi terhadap \textit{frontend dashboard} pemantauan \textit{Water Treatment Plant} (WTP) 
+yang telah diimplementasikan. Evaluasi dilakukan melalui dua tahap pengujian, yaitu pengujian fungsional 
+(\textit{black-box testing}) untuk memverifikasi kesesuaian perilaku sistem terhadap spesifikasi, dan pengujian 
+usabilitas menggunakan \textit{System Usability Scale} (SUS) untuk menilai kemudahan penggunaan antarmuka. 
+Hasil kedua pengujian tersebut selanjutnya dipetakan terhadap kebutuhan fungsional yang telah didefinisikan 
+pada Bab~\ref{chap:analisis-masalah}, dan diakhiri dengan identifikasi batasan sistem.
 
-\begin{table}[t]
-  \begin{tabular}{|c|l|l|}
-  \hline
-  Kata & Salah & Benar \\ \hline
-  sedangkan & \begin{tabular}[c]{@{}c@{}}Sedangkan sistem lama masih\\ digunakan oleh banyak pengguna.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Sistem lama masih digunakan\\ oleh banyak pengguna,\\ sedangkan sistem baru belum siap.\end{tabular} \\ \hline
-  sehingga & \begin{tabular}[c]{@{}c@{}}Sehingga sistem lama masih\\ digunakan oleh banyak pengguna.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Sistem lama masih digunakan\\ oleh banyak pengguna sehingga\\ sistem baru belum siap.\end{tabular} \\ \hline
-  \end{tabular}
-  \caption{Contoh penggunaan kata "sedangkan" dan "sehingga"}
-  \label{tbl:sedangkan_sehingga}
+\section{Rancangan Pengujian}
+Pengujian dirancang untuk menjawab kriteria keberhasilan yang telah ditetapkan pada Bab~\ref{chap:pendahuluan}, 
+yaitu seluruh kebutuhan fungsional \textit{frontend} dapat diverifikasi melalui pengujian fungsional. Ruang lingkup 
+pengujian dibatasi pada perilaku antarmuka dan alur interaksi operator. Pengujian ini tidak mencakup validasi akurasi 
+kalibrasi sensor, efektivitas proses kimia, kebenaran algoritma kendali dosis pada \textit{backend}, maupun keandalan 
+jaringan pada kondisi lapangan, sebagaimana telah dinyatakan dalam batasan masalah.
+
+Pengujian fungsional dilakukan dengan metode \textit{black-box}, yaitu dengan mengeksekusi setiap skenario secara 
+langsung melalui antarmuka web tanpa meninjau struktur kode di baliknya. Suatu skenario dinyatakan berhasil 
+(\textit{passed}) apabila antarmuka menampilkan data dari \textit{backend} dengan benar, menerima masukan pengguna 
+sesuai kebutuhan, dan memberikan respons yang sesuai terhadap aksi operator.
+
+\section{Hasil Pengujian Fungsional}
+Pengujian fungsional dilakukan terhadap 20 skenario yang mencakup autentikasi, pemantauan \textit{dashboard}, 
+analitik sensor, peninjauan riwayat, ekspor laporan, penanganan alarm, pengaturan \textit{offset} pompa, serta 
+penanganan masukan tidak valid. Ringkasan skenario dan hasil pengujian ditunjukkan pada Tabel~\ref{tab:blackbox}.
+
+\input{tables/longtable2.tex}
+
+Berdasarkan Tabel~\ref{tab:blackbox}, seluruh 20 skenario pengujian berhasil dieksekusi dengan status 
+\textit{passed}. Ringkasan hasil pengujian berdasarkan kategori fungsionalitas ditunjukkan pada 
+Tabel~\ref{tab:ringkasan-uji}.
+
+\begin{table}[H]
+\centering
+\caption{Ringkasan hasil pengujian fungsional berdasarkan kategori}
+\label{tab:ringkasan-uji}
+\begin{tabular}{|p{6cm}|c|c|}
+\hline
+\textbf{Kategori} & \textbf{Jumlah Kasus} & \textbf{Hasil} \\ \hline
+Autentikasi & 2 & \textit{Passed} \\ \hline
+Pemantauan \textit{dashboard} & 6 & \textit{Passed} \\ \hline
+Analitik sensor & 3 & \textit{Passed} \\ \hline
+Peninjauan riwayat dan ekspor & 4 & \textit{Passed} \\ \hline
+Penanganan alarm & 2 & \textit{Passed} \\ \hline
+Interaksi \textit{offset} pompa & 3 & \textit{Passed} \\ \hline
+\textbf{Total} & \textbf{20} & \textbf{\textit{Passed}} \\ \hline
+\end{tabular}
 \end{table}
 
-Kata "sedangkan" dan "sehingga" adalah kata hubung atau konjungsi. 
-Konjungsi adalah kata atau ungkapan yang menghubungkan satuan bahasa 
-(kata, frasa, klausa, dan kalimat). 
-Konjungsi dapat dibagi menjadi konjungsi intrakalimat dan antarkalimat.  
-Kata "sedangkan" menghubungkan dua klausa yang bersifat kontrasif, 
-sedangkan "sehingga" menghubungkan dua klausa yang bersifat kausal. 
-Dalam ragam formal, kata hubung “sedangkan” dan “sehingga” hanya dapat digunakan 
-sebagai konjungsi intrakalimat sehingga kedua konjungsi itu \textbf{tidak dapat diletakkan pada awal kalimat}.
-Selain itu, penggunaan kata "sedangkan" harus didahului oleh koma (,), sedangkan kata "sehingga" tidak perlu didahului oleh koma (,).
-Contoh penggunaan yang benar dan salah dapat dilihat pada Tabel \ref{tbl:sedangkan_sehingga}.
+Hasil tersebut menunjukkan bahwa \textit{frontend} tidak hanya mampu menyajikan data pemantauan, tetapi juga 
+mendukung aksi operator melalui kendali antarmuka yang terproteksi, serta kemampuan sistem memperingatkan operator ketika 
+data telemetri tidak mutakhir dan menolak masukan yang tidak valid sebelum dikirimkan ke \textit{backend}.
 
+\section{Hasil Pengujian Usabilitas}
+Setelah seluruh fungsionalitas terverifikasi, dilakukan evaluasi terhadap kemudahan penggunaan (\textit{usability})
+antarmuka menggunakan instrumen kuesioner baku \textit{System Usability Scale} (SUS) \autocite{brooke1996sus}.
+Instrumen ini terdiri atas sepuluh pernyataan, yaitu lima pernyataan bernada positif pada nomor ganjil dan lima
+pernyataan bernada negatif pada nomor genap, yang masing-masing dinilai menggunakan skala Likert satu sampai lima,
+dengan nilai satu menyatakan sangat tidak setuju dan nilai lima menyatakan sangat setuju. Pengujian melibatkan seorang operator WTP ITB 
+Jatinangor dengan pengalaman kerja lebih dari tiga tahun sebagai responden.
 
-\subsection{Penggunaan Istilah yang Tidak Baku}
-Ada beberapa istilah yang sering digunakan dalam pembicaraan sehari-hari, tetapi tidak baku dalam penulisan ilmiah.
-Beberapa istilah tersebut antara lain:
+\begin{table}[H]
+\centering
+\caption{Hasil kuesioner \textit{System Usability Scale}}
+\label{tab:sus}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|p{9cm}|c|c|}
+\hline
+\textbf{No} & \textbf{Pernyataan} & \textbf{Jenis} & \textbf{Skor} \\ \hline
+1 & Saya rasa saya akan menggunakan \textit{dashboard} WTP ini secara rutin. & Positif & 5 \\ \hline
+2 & Saya merasa \textit{dashboard} WTP ini terlalu rumit, padahal bisa dibuat lebih sederhana. & Negatif & 2 \\ \hline
+3 & Saya merasa \textit{dashboard} WTP ini mudah digunakan. & Positif & 4 \\ \hline
+4 & Saya rasa saya membutuhkan bantuan dari orang lain untuk dapat menggunakan \textit{dashboard} WTP ini. & Negatif & 3 \\ \hline
+5 & Saya menemukan bahwa fungsi dan fitur di \textit{dashboard} WTP ini terintegrasi dengan baik. & Positif & 4 \\ \hline
+6 & Saya merasa ada terlalu banyak hal yang tidak konsisten pada \textit{dashboard} WTP ini. & Negatif & 2 \\ \hline
+7 & Saya rasa operator lain akan memahami cara menggunakan \textit{dashboard} WTP ini dengan sangat cepat. & Positif & 5 \\ \hline
+8 & Saya merasa \textit{dashboard} WTP ini sangat membingungkan saat digunakan. & Negatif & 3 \\ \hline
+9 & Saya merasa sangat percaya diri saat menggunakan \textit{dashboard} WTP ini. & Positif & 4 \\ \hline
+10 & Saya perlu mempelajari banyak hal terlebih dahulu sebelum bisa lancar menggunakan \textit{dashboard} WTP ini. & Negatif & 2 \\ \hline
+\multicolumn{3}{|r|}{\textbf{Total Kontribusi}} & \textbf{30} \\ \hline
+\end{tabular}
+\end{table}
+
+Kontribusi skor untuk pernyataan bernomor ganjil dihitung dengan mengurangi skor jawaban dengan satu, sedangkan 
+kontribusi untuk pernyataan bernomor genap dihitung dengan mengurangkan skor jawaban dari lima. Akumulasi 
+kontribusi dari kelima item ganjil adalah 17 dan dari kelima item genap adalah 13sehingga diperoleh total 
+kontribusi sebesar 30. Nilai akhir SUS diperoleh dengan mengalikan total kontribusi tersebut dengan konstanta 
+2,5, sebagaimana ditunjukkan pada Persamaan berikut.
+
+\begin{equation*}
+    \text{Skor SUS} = 30 \times 2{,}5 = 75
+\end{equation*}
+
+Skor akhir SUS yang diperoleh adalah 75. Nilai tersebut melampaui target minimal sebesar 70 yang ditetapkan 
+sebagai kriteria keberhasilan, sekaligus berada di atas nilai rata-rata industri yang umumnya berkisar pada 
+angka 68 \autocite{sauro2011sus}. Merujuk pada \textit{adjective rating scale}, skor 75 termasuk dalam kategori 
+\textit{good}, sedangkan berdasarkan \textit{acceptability range} skor tersebut termasuk dalam kategori 
+\textit{acceptable} \autocite{bangor2009sus}.
+
+Ditinjau dari pola jawaban responden, penilaian tertinggi diberikan pada aspek keinginan menggunakan sistem 
+secara rutin dan kecepatan operator lain dalam memahami antarmuka (keduanya bernilai 5). Sementara itu, dua 
+pernyataan negatif memperoleh skor 3, yaitu terkait kebutuhan bantuan pihak teknis dan tingkat kebingungan saat 
+penggunaan. Pola ini mengindikasikan bahwa meskipun antarmuka dinilai mudah digunakan secara keseluruhan, masih 
+terdapat ruang perbaikan pada aspek pemanduan pengguna, misalnya melalui penambahan pesan konfirmasi yang lebih 
+eksplisit pada aksi penting maupun petunjuk penggunaan pada halaman yang bersifat teknis.
+
+Perlu dicatat bahwa pengujian usabilitas ini hanya melibatkan satu responden, yaitu operator yang bertugas pada 
+WTP ITB Jatinangor. Oleh karena itu, skor yang diperoleh merepresentasikan penilaian dari pengguna sasaran 
+sistem, tetapi belum dapat digeneralisasi secara statistik. Hasil ini sebaiknya dipandang sebagai indikasi awal 
+penerimaan pengguna, bukan sebagai pengukuran usabilitas yang konklusif.
+
+\section{Evaluasi Ketercapaian Kebutuhan Fungsional}
+Berdasarkan hasil pengujian pada Tabel~\ref{tab:blackbox}, seluruh kebutuhan fungsional yang didefinisikan pada 
+Bab~\ref{chap:analisis-masalah} dapat diverifikasi. Pemetaan antara kebutuhan fungsional dan skenario pengujian 
+yang memverifikasinya ditunjukkan pada Tabel~\ref{tab:pemetaan-kf}.
+
+\begin{table}[H]
+\centering
+\caption{Pemetaan kebutuhan fungsional terhadap skenario pengujian}
+\label{tab:pemetaan-kf}
+\begin{tabular}{|c|p{7cm}|p{3cm}|c|}
+\hline
+\textbf{ID} & \textbf{Kebutuhan Fungsional} & \textbf{Skenario Uji} & \textbf{Status} \\ \hline
+KF-01 & \textit{Login}, \textit{logout}, dan pembatasan akses halaman & FE-01, FE-02 & Terpenuhi \\ \hline
+KF-02 & Ringkasan kepatuhan dan parameter kualitas air terkini & FE-04, FE-05 & Terpenuhi \\ \hline
+KF-03 & Visualisasi level tangki dan status pompa dosis & FE-06, FE-07 & Terpenuhi \\ \hline
+KF-04 & Peringatan visual saat data telemetri kedaluwarsa & FE-08 & Terpenuhi \\ \hline
+KF-05 & Grafik, statistik, dan riwayat parameter kualitas air & FE-09, FE-10, FE-11 & Terpenuhi \\ \hline
+KF-06 & Penyaringan rentang waktu dan ekspor CSV/XLSX & FE-12, FE-13, FE-14, FE-15 & Terpenuhi \\ \hline
+KF-07 & Daftar alarm aktif dan terselesaikan serta \textit{acknowledge} & FE-16, FE-17 & Terpenuhi \\ \hline
+KF-08 & Informasi dosis dan masukan \textit{offset} yang valid & FE-18, FE-19, FE-20 & Terpenuhi \\ \hline
+KF-09 & Navigasi antarhalaman \textit{dashboard} & FE-03, FE-09, FE-12, FE-16, FE-18 & Terpenuhi \\ \hline
+\end{tabular}
+\end{table}
+
+Dengan demikian, kriteria keberhasilan yang ditetapkan pada Bab~\ref{chap:pendahuluan} telah tercapai. Rumusan masalah 
+mengenai belum terpusatnya informasi operasional dijawab melalui halaman \textit{dashboard} yang menggabungkan kepatuhan 
+parameter, level tangki bahan kimia, dan status pompa ke dalam satu tampilan (KF-02, KF-03). Persoalan keterlambatan 
+pengenalan kondisi yang memerlukan tindakan dijawab melalui halaman alarm dengan alur pengakuan yang terstruktur (KF-07). 
+Adapun risiko pengambilan keputusan berdasarkan data yang tidak valid dijawab melalui penanganan kondisi pemuatan, 
+kegagalan, dan kedaluwarsa data yang diverifikasi pada skenario FE-08 (KF-04).
+
+\section{Batasan dan Kendala Sistem}
+Meskipun seluruh skenario pengujian fungsional berhasil dilalui, terdapat sejumlah batasan yang perlu diperhatikan 
+dalam menafsirkan hasil evaluasi ini:
 \begin{enumerate}
-  \item analisa $\rightarrow$ analisis
-  \item eksisting atau existing $\rightarrow$ yang ada atau saat ini
-  \item bisnis proses $\rightarrow$ proses bisnis
-  \item user $\rightarrow$ pengguna
-  \item system $\rightarrow$ sistem
-  \item database $\rightarrow$ basis data
-  \item aktifitas $\rightarrow$ aktivitas
-  \item efektifitas $\rightarrow$ efektivitas
-  \item sosial media $\rightarrow$ media sosial
+    \item \textbf{Ketergantungan pada Interval \textit{Polling}:} Karena \textit{frontend} memperoleh data melalui 
+    penarikan berkala (\textit{polling}), visualisasi telemetri memiliki jeda waktu (\textit{delay}) minimal sebesar 
+    interval \textit{polling} dibandingkan dengan kondisi aktual di lapangan. Sistem belum mengadopsi komunikasi dua arah 
+    yang persisten untuk pembaruan data secara seketika.
+    \item \textbf{Ketergantungan Mutasi pada Ketersediaan \textit{Backend}:} Fitur pengakuan alarm dan pengiriman nilai 
+    \textit{offset} dosis bergantung sepenuhnya pada ketersediaan layanan \textit{backend}. Apabila koneksi ke REST API 
+    terputus, \textit{frontend} belum dapat menyimpan perubahan tersebut secara lokal untuk dikirimkan kembali setelah 
+    koneksi pulih (\textit{offline mutation queue}).
+    \item \textbf{Cakupan Pengujian Terbatas pada Lapisan Antarmuka:} Pengujian yang dilakukan memverifikasi perilaku 
+    \textit{frontend} terhadap spesifikasi, tetapi tidak mengevaluasi akurasi kalibrasi sensor, efektivitas dosis kimia, 
+    kebenaran algoritma kendali pada \textit{backend}, maupun keandalan jaringan pada kondisi operasional pabrik. 
+    Hasil evaluasi ini karenanya harus dipahami sebagai verifikasi subsistem \textit{frontend}, bukan validasi keseluruhan 
+    sistem otomasi WTP.
+    \item \textbf{Jumlah Responden Pengujian Usabilitas:} Evaluasi usabilitas hanya melibatkan satu responden sehingga 
+    hasilnya belum memiliki kekuatan generalisasi statistik.
 \end{enumerate}
-
-\subsection{Pemisah Desimal dan Ribuan}
-Tanda pemisah desimal dalam bahasa Indonesia adalah tanda koma, contoh:
-\begin{enumerate}
-  \item (Salah) Akurasi naik menjadi 50.6\% 
-  \item (Benar) Akurasi naik menjadi 50,6\% 
-\end{enumerate}
-
-\subsection{Daftar atau \textit{List}}
-Ada beberapa aturan penulisan daftar atau \textit{list} yang perlu diperhatikan, antara lain:
-\begin{enumerate}[a)]
-\item Jika memungkinkan, hindari penggunaan “bullet points” atau sejenisnya. Sebaiknya, gunakan angka (1, 2, 3, ...) atau huruf (a, b, c, …). Dengan demikian, pembaca dapat dengan mudah melihat jumlah \textit{item} atau \textit{list}. 
-\item Jika dalam daftar hanya ada satu item, tidak perlu menggunakan nomor urut.
-\item Penjelasan atau deskripsi suatu item sebaiknya menyatu dengan judul item tersebut, tidak berbeda halaman. Contoh yang salah: judul item ada di halaman 10, namun deskripsinya di halaman 11. Sebaiknya pindahkan judul tersebut ke halaman 11.
-\item Jika penjelasan atau deskripsi suatu item cukup panjang, misalnya lebih dari 1 halaman atau terdiri atas beberapa paragraf, sebaiknya setiap item tersebut dijadikan judul subbab, kecuali jika level subbab sudah mencapai level 4. 
-\end{enumerate}
-
-\subsection{Penggunaan Kata "masing-masing" dan "setiap"}
-Kata “masing-masing” digunakan di belakang kata yang diterangkan, misalnya 
-"Setiap proses menggunakan algoritma masing-masing". Kata “tiap-tiap” atau “setiap”
-ditempatkan di depan kata yang diterangkan, misalnya
-"Setiap proses menggunakan algoritma tertentu".

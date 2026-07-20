@@ -1,0 +1,190 @@
+\babel@toc {indonesian}{}\relax 
+\setlength {\cftbeforechapskip }{0pt}
+\renewcommand {\cftchapfont }{\normalfont }
+\renewcommand {\cftchappagefont }{\normalfont }
+\contentsline {chapter}{LEMBAR PENGESAHAN}{iii}{chapter*.2}%
+\contentsline {chapter}{PERNYATAAN ORISINALITAS}{v}{chapter*.3}%
+\contentsline {chapter}{PERNYATAAN PENGGUNAAN AI}{vii}{chapter*.4}%
+\contentsline {chapter}{ABSTRAK}{ix}{chapter*.6}%
+\contentsline {chapter}{KATA PENGANTAR}{xi}{chapter*.7}%
+\contentsline {chapter}{DAFTAR ISI}{xiii}{section*.8}%
+\contentsline {chapter}{DAFTAR GAMBAR}{xvii}{section*.9}%
+\contentsline {chapter}{DAFTAR TABEL}{xix}{section*.10}%
+\contentsline {chapter}{DAFTAR \textit {LISTING}}{xxi}{chapter*.11}%
+\setlength {\cftbeforechapskip }{10pt}
+\renewcommand {\cftchapfont }{\bfseries }
+\renewcommand {\cftchappagefont }{\bfseries }
+\contentsline {chapter}{\numberline {I}PENDAHULUAN}{1}{chapter.1}%
+\contentsline {section}{\numberline {I.1}Latar Belakang}{1}{section.1.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {I.2}Rumusan Masalah}{3}{section.1.2}%
+\contentsline {section}{\numberline {I.3}Tujuan}{4}{section.1.3}%
+\contentsline {section}{\numberline {I.4}Batasan Masalah}{4}{section.1.4}%
+\contentsline {section}{\numberline {I.5}Metodologi}{5}{section.1.5}%
+\contentsline {section}{\numberline {I.6}Sistematika Penulisan}{6}{section.1.6}%
+\contentsline {chapter}{\numberline {II}STUDI LITERATUR}{7}{chapter.2}%
+\contentsline {section}{\numberline {II.1}Pemantauan Instalasi Pengolahan Air}{7}{section.2.1}%
+\contentsline {section}{\numberline {II.2}Parameter Kualitas Air}{8}{section.2.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.2.1}Derajat Keasaman (pH)}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {II.2.2}Kekeruhan}{8}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {II.2.3}Total Dissolved Solids (TDS)}{9}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {II.2.4}Pemanfaatan Parameter pada Dashboard}{9}{subsection.2.2.4}%
+\contentsline {section}{\numberline {II.3}Internet of Things untuk Pemantauan Air}{9}{section.2.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {II.4}Platform Penyajian Data Pemantauan}{11}{section.2.4}%
+\contentsline {subsection}{\numberline {II.4.1}Perkakas \textit {Business Intelligence}}{11}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {II.4.2}Platform IoT Siap Pakai}{11}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {II.4.3}Pengembangan Antarmuka Web Mandiri}{12}{subsection.2.4.3}%
+\contentsline {section}{\numberline {II.5}Penelitian Terkait}{13}{section.2.5}%
+\contentsline {subsection}{\numberline {II.5.1}Tinjauan dan Kerangka Kerja Umum}{13}{subsection.2.5.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.5.2}Sistem Pemantauan Kualitas Air Berbasis IoT}{13}{subsection.2.5.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.5.3}Antarmuka Operator dan Pemantauan Berbasis Web}{14}{subsection.2.5.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {II.5.4}Posisi Tugas Akhir}{15}{subsection.2.5.4}%
+\contentsline {chapter}{\numberline {III}ANALISIS MASALAH}{17}{chapter.3}%
+\contentsline {section}{\numberline {III.1}Analisis Kondisi Saat Ini}{17}{section.3.1}%
+\contentsline {section}{\numberline {III.2}Batas Sistem dan Pemangku Kepentingan}{17}{section.3.2}%
+\contentsline {section}{\numberline {III.3}Identifikasi Masalah Pengguna}{18}{section.3.3}%
+\contentsline {section}{\numberline {III.4}Kebutuhan Fungsional}{19}{section.3.4}%
+\contentsline {section}{\numberline {III.5}Kebutuhan Nonfungsional}{20}{section.3.5}%
+\contentsline {section}{\numberline {III.6}Analisis Pemilihan Solusi}{20}{section.3.6}%
+\contentsline {subsection}{\numberline {III.6.1}Kriteria Evaluasi Solusi}{20}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {III.6.2}Analisis Alternatif Solusi}{21}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {III.6.3}Analisis Penentuan Solusi}{22}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {III.6.4}Analisis Pemilihan Tumpukan Teknologi (\textit {Tech Stack})}{23}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {III.6.5}Penentuan Solusi Akhir}{24}{subsection.3.6.5}%
+\contentsline {chapter}{\numberline {IV}PERANCANGAN SISTEM}{25}{chapter.4}%
+\contentsline {section}{\numberline {IV.1}Pendekatan dan Tahapan Perancangan}{25}{section.4.1}%
+\contentsline {subsection}{\numberline {IV.1.1}Prinsip Perancangan}{25}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {IV.1.2}Sumber Kebutuhan Perancangan}{26}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {IV.1.3}Tahapan Penurunan Kebutuhan menjadi Rancangan}{27}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {IV.1.4}Penurunan Rancangan Halaman \textit {Dashboard} Utama}{29}{subsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {IV.1.4.1}Penentuan Hierarki Informasi}{29}{subsubsection.4.1.4.1}%
+\contentsline {subsubsection}{\numberline {IV.1.4.2}Iterasi Rancangan Panel Kepatuhan}{30}{subsubsection.4.1.4.2}%
+\contentsline {subsubsection}{\numberline {IV.1.4.3}Pemilihan Bentuk Representasi Visual}{30}{subsubsection.4.1.4.3}%
+\contentsline {section}{\numberline {IV.2}Perancangan Arsitektur dan Interaksi Pengguna}{31}{section.4.2}%
+\contentsline {subsection}{\numberline {IV.2.1}Perancangan Interaksi Pengguna}{31}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {IV.2.2}Perancangan Arsitektur Aliran Data}{33}{subsection.4.2.2}%
+\contentsline {section}{\numberline {IV.3}Perancangan Struktur Halaman dan Routing}{35}{section.4.3}%
+\contentsline {subsection}{\numberline {IV.3.1}Rute Publik (\textit {Public Route})}{36}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {IV.3.2}Rute Terproteksi (\textit {Protected Route})}{36}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {IV.3.3}Alur Navigasi Pengguna}{37}{subsection.4.3.3}%
+\contentsline {section}{\numberline {IV.4}Perancangan Antarmuka Pengguna}{38}{section.4.4}%
+\contentsline {subsection}{\numberline {IV.4.1}Antarmuka Halaman \textit {Dashboard} Utama}{38}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {IV.4.2}Antarmuka Peringatan Data Kedaluwarsa}{39}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {IV.4.3}Antarmuka Halaman Riwayat Sensor}{40}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {IV.4.4}Antarmuka Halaman Log Alarm}{41}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {IV.4.5}Antarmuka Halaman Analitik Sensor}{42}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {IV.4.6}Antarmuka Halaman Kendali Pompa}{42}{subsection.4.4.6}%
+\contentsline {section}{\numberline {IV.5}Perancangan Aliran Data Telemetri}{43}{section.4.5}%
+\contentsline {subsection}{\numberline {IV.5.1}Karakteristik Data yang Dikelola}{43}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {IV.5.2}Mekanisme Aliran Data}{44}{subsection.4.5.2}%
+\contentsline {section}{\numberline {IV.6}Perancangan Kontrak API}{44}{section.4.6}%
+\contentsline {subsection}{\numberline {IV.6.1}Endpoint Telemetri Terkini (\textit {Latest Telemetry})}{45}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {IV.6.2}Endpoint Riwayat Historis (\textit {Historical Data})}{46}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {IV.6.3}Endpoint Intervensi Dosis (\textit {Dose Offset Command})}{46}{subsection.4.6.3}%
+\contentsline {chapter}{\numberline {V}IMPLEMENTASI SISTEM}{49}{chapter.5}%
+\contentsline {section}{\numberline {V.1}Tumpukan Teknologi Frontend}{49}{section.5.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {V.1.1}Next.js}{49}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {V.1.2}TypeScript}{49}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {V.1.3}TanStack Query}{49}{subsection.5.1.3}%
+\contentsline {section}{\numberline {V.2}Implementasi Antarmuka Pengguna}{50}{section.5.2}%
+\contentsline {subsection}{\numberline {V.2.1}Halaman \textit {Dashboard} Utama}{50}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {V.2.2}Halaman Riwayat Sensor}{51}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {V.2.3}Halaman Pusat Alarm (\textit {Alarm Center})}{52}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {V.2.4}Halaman Analitik Sensor}{54}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {V.2.5}Halaman \textit {Offset} Pompa (\textit {Chemical Dosing Control})}{55}{subsection.5.2.5}%
+\contentsline {section}{\numberline {V.3}Implementasi Autentikasi dan Proteksi Rute}{56}{section.5.3}%
+\contentsline {section}{\numberline {V.4}Implementasi Integrasi REST API dan Manajemen \textit {State}}{56}{section.5.4}%
+\contentsline {section}{\numberline {V.5}Implementasi Penanganan Kondisi Data Tidak Normal}{57}{section.5.5}%
+\contentsline {section}{\numberline {V.6}Implementasi \textit {Progressive Web App} dan \textit {Deployment}}{58}{section.5.6}%
+\contentsline {chapter}{\numberline {VI}EVALUASI SISTEM}{59}{chapter.6}%
+\contentsline {section}{\numberline {VI.1}Rancangan Pengujian}{59}{section.6.1}%
+\contentsline {section}{\numberline {VI.2}Hasil Pengujian Fungsional}{59}{section.6.2}%
+\contentsline {section}{\numberline {VI.3}Hasil Pengujian Usabilitas}{63}{section.6.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {section}{\numberline {VI.4}Evaluasi Ketercapaian Kebutuhan Fungsional}{64}{section.6.4}%
+\contentsline {section}{\numberline {VI.5}Batasan dan Kendala Sistem}{65}{section.6.5}%
+\contentsline {chapter}{\numberline {VII}KESIMPULAN DAN SARAN}{67}{chapter.7}%
+\contentsline {section}{\numberline {VII.1}Kesimpulan}{67}{section.7.1}%
+\contentsline {section}{\numberline {VII.2}Saran}{68}{section.7.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {chapter}{Lampiran \numberline {A}KODE PROGRAM}{73}{appendix.1.A}%
+\contentsline {section}{\numberline {A.1}Kontrak Antarmuka Data (API) \textit {Frontend}}{73}{section.1.A.1}%

@@ -1,0 +1,41 @@
+\begin{minipage}{\textwidth}
+\begin{lstlisting}[caption={Kontrak antarmuka permintaan (request) dan respons untuk offset dosis}, label={lst:dose-offset}, frame=single, captionpos=t, language=JavaScript]
+// Definisi Antarmuka Objek Permintaan (Frontend ke Backend)
+export interface DoseOffsetRequest {
+  pacOffset: number;
+  chlorineOffset: number;
+  updatedBy: string;
+}
+
+// Representasi Objek Permintaan
+{
+  "pacOffset": 0.5,
+  "chlorineOffset": -0.2,
+  "updatedBy": "operator01"
+}
+
+// Definisi Antarmuka Objek Respons (Backend ke Frontend)
+export interface DoseOffsetResponse {
+  success: boolean;
+  message: string;
+  data: {
+    pacOffset: number;
+    chlorineOffset: number;
+    updatedAt: string;
+    updatedBy: string;
+  };
+}
+
+// Representasi Objek Respons
+{
+  "success": true,
+  "message": "Offset dosis berhasil diperbarui",
+  "data": {
+    "pacOffset": 0.5,
+    "chlorineOffset": -0.2,
+    "updatedAt": "2026-07-06T08:35:00Z",
+    "updatedBy": "operator01"
+  }
+}
+\end{lstlisting}
+\end{minipage}

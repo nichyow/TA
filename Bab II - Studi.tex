@@ -1,232 +1,381 @@
-\cleardoublepage % memastikan bab baru dimulai di halaman ganjil (kanan)
+\cleardoublepage
 \chapter{STUDI LITERATUR}
 \label{chap:studi-literatur}
-\section{Tentang Studi Literatur}
-Studi literatur biasanya berisi tentang tinjauan pustaka, landasan teori, dan penelitian-penelitian terdahulu yang relevan dengan topik tugas akhir yang dikerjakan.
-Dalam subbab ini, penulis diharapkan dapat menjelaskan:
-\begin{enumerate}
-  \item Landasan teori yang diperoleh dari literatur yang akan digunakan untuk menyelesaikan persoalan TA;
-  \item Pengetahuan tentang kasus yang akan dikaji; dan
-  \item Penelitian atau solusi terkait untuk mengetahui posisi persoalan dan berbagai solusi yang memungkinkan untuk diterapkan berdasarkan hasil studi literatur ini.
-\end{enumerate}
-Jadi, studi literatur ini bukan sekadar rangkuman dari berbagai sumber referensi, tetapi harus diolah dan disajikan secara sistematis sehingga dapat memberikan gambaran yang jelas tentang landasan teori dan penelitian-penelitian terdahulu yang relevan dengan topik tugas akhir.
 
-Penulisan studi literatur yang baik dimulai dari penjelasan tentang kasus yang akan dikaji, kemudian diikuti dengan penjelasan tentang teori-teori yang relevan, dan diakhiri dengan tinjauan terhadap penelitian-penelitian terdahulu yang berkaitan dengan topik tugas akhir.
-Misalnya, jika topik tugas akhir adalah tentang masalah klasifikasi biji kopi berdasarkan citra kopi, 
-penulis dapat memulai dengan menjelaskan terlebih dahulu tentang karakteristik biji kopi, masalah dalam melakukan klasifikasi biji kopi, 
-kemudian menjelaskan tentang berbagai metode berbasis komputer yang dapat digunakan untuk mengklasifikasikan biji kopi berdasarkan citranya, 
-metode terbaik yang memungkinkan untuk diterapkan, teori-teori dasar tentang metode tersebut, dan diakhiri dengan tinjauan terhadap penelitian-penelitian terdahulu yang menggunakan metode untuk klasifikasi citra.
+Bab ini membahas konsep yang menjadi dasar pengembangan frontend dashboard WTP
+dan membandingkan tugas akhir dengan penelitian terdahulu. 
 
-Dalam studi literatur, biasanya banyak penjelasan tentang teori-teori yang disertai dengan rumus atau persamaan matematika, gambar, tabel, algoritma, pseudocode, atau kode program.
-Oleh karena itu, pada subbab berikut akan dijelaskan beberapa hal teknis terkait format penulisan dokumen tugas akhir.
+\section{Pemantauan Instalasi Pengolahan Air}
 
-\section{Format Penulisan Gambar, Tabel, Rumus, dan Kode Program}
-Berikut adalah beberapa contoh penulisan gambar, tabel, rumus, dan kode program yang sesuai dengan format penulisan tugas akhir.
-\subsection{Penulisan Gambar}
-Contoh gambar dapat dilihat pada Gambar \ref{fig:jaringan} dan Gambar \ref{fig:jaringan2}.
-Secara vertikal, gambar biasanya diletakkan di bagian atas halaman (\textit{top}) atau di bagian bawah halaman (\textit{bottom}).
-Gambar tidak harus diletakkan tepat di tempat gambar tersebut disebutkan pertama kali dalam teks,
-tetapi dapat diletakkan di halaman berikutnya jika tidak muat di halaman yang sama. Pada contoh ini, kedua gambar diletakkan di bagian atas halaman 
-menggunakan opsi \texttt{[t]} pada lingkungan \texttt{figure}, namun pada halaman yang berbeda, meskipun disebutkan di halaman yang sama akibat ruang yang terbatas. 
+Instalasi Pengolahan Air atau \textit{Water Treatment Plant} (WTP) menjalankan
+serangkaian proses fisika dan kimia yang saling bergantung untuk menurunkan
+kandungan partikel tersuspensi, mikroorganisme, dan zat terlarut dalam air
+baku. Pada tahap koagulasi, penambahan bahan kimia koagulan seperti Poly
+Aluminium Chloride (PAC) menetralkan muatan negatif pada permukaan partikel
+koloid sehingga gaya tolak-menolak antarpartikel berkurang dan partikel dapat
+saling menempel membentuk flok yang lebih besar. Flok yang terbentuk kemudian
+mengendap pada tahap sedimentasi akibat gaya gravitasi, sedangkan partikel
+halus yang belum mengendap disaring pada tahap filtrasi. Tahap desinfeksi,
+umumnya menggunakan kaporit, bertujuan menonaktifkan mikroorganisme patogen
+melalui oksidasi dinding sel maupun komponen metabolik mikroorganisme,
+sedangkan penambahan soda ash berfungsi menaikkan nilai pH air untuk mencegah
+sifat korosif maupun menjaga efektivitas proses desinfeksi. Karena setiap
+tahapan bergantung pada hasil tahapan sebelumnya, perubahan kondisi air baku
+pada satu proses dapat memengaruhi efektivitas proses berikutnya sehingga
+pemantauan kondisi operasional secara berkelanjutan menjadi bagian penting
+dalam menjaga kualitas hasil pengolahan.
 
-Penyebutan judul gambar dalam teks menggunakan perintah \texttt{ref}, misalnya Gambar \texttt{\\ref\{fig:jaringan\}}.
-Gunakan huruf kapital pada kata "Gambar" saat menyebutkan gambar dalam teks.
+Penentuan dosis bahan kimia yang tepat menjadi salah satu aspek kritis dalam
+proses tersebut. Dosis yang terlalu rendah menyebabkan proses koagulasi,
+desinfeksi, atau koreksi pH tidak berjalan optimal sehingga kualitas air hasil
+pengolahan berisiko tidak memenuhi standar yang ditetapkan. Sebaliknya, dosis
+yang berlebihan tidak hanya meningkatkan biaya operasional, tetapi juga dapat
+menyisakan residu bahan kimia pada air hasil pengolahan. Oleh karena itu,
+proses pemberian dosis perlu disertai dengan pemantauan parameter kualitas air
+secara berkelanjutan agar penyesuaian dosis dapat dilakukan sesuai dengan
+kondisi air baku yang berubah-ubah.
 
-\begin{figure}[t] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
-  \caption{Contoh peletakan gambar di bagian atas halaman} 
-	\label{fig:jaringan}
-    	\includegraphics[width=0.7\textwidth]{images/gambar1.png}
+\section{Parameter Kualitas Air}
+
+Parameter kualitas air merupakan indikator yang digunakan untuk menilai kondisi
+air selama proses pengolahan. Pada sistem WTP, pemantauan parameter kualitas air
+dilakukan secara berkala untuk memastikan bahwa proses pengolahan berjalan
+dengan baik dan menghasilkan air yang memenuhi standar yang telah ditetapkan
+\autocite{kementerian2023permenkes}. Perubahan nilai parameter dapat menunjukkan adanya perubahan karakteristik air
+baku maupun gangguan pada proses pengolahan sehingga informasi tersebut menjadi
+dasar bagi operator dalam melakukan evaluasi dan pengambilan keputusan.
+
+Pada tugas akhir ini, \textit{frontend dashboard} menyajikan tiga parameter utama, yaitu
+pH, kekeruhan, dan \textit{Total Dissolved Solids} (TDS). Ketiga parameter
+tersebut dipilih karena mewakili kondisi kualitas air yang dipantau pada sistem
+WTP ITB Jatinangor serta digunakan sebagai dasar evaluasi terhadap hasil
+pengolahan.
+
+\subsection{Derajat Keasaman (pH)}
+
+pH merupakan parameter yang menunjukkan tingkat keasaman atau kebasaan suatu
+larutan dengan rentang nilai 0 hingga 14. Nilai pH sebesar 7 menunjukkan kondisi
+netral, sedangkan nilai di bawah 7 bersifat asam dan nilai di atas 7 bersifat
+basa. Dalam proses pengolahan air, nilai pH memengaruhi efektivitas berbagai
+tahapan pengolahan, termasuk proses koagulasi dan desinfeksi. Oleh karena itu,
+pemantauan pH diperlukan agar operator dapat memastikan proses pengolahan
+berlangsung pada rentang yang diharapkan.
+
+Pada \textit{dashboard}, nilai pH ditampilkan dalam bentuk nilai terkini,
+grafik tren historis, serta riwayat pengukuran. Penyajian tersebut membantu
+operator mengamati perubahan pH dari waktu ke waktu tanpa harus melakukan
+pengukuran secara manual.
+
+\subsection{Kekeruhan}
+
+Kekeruhan (\textit{turbidity}) merupakan ukuran banyaknya partikel tersuspensi
+yang menyebabkan air tampak keruh. Nilai kekeruhan umumnya dinyatakan dalam
+satuan Nephelometric Turbidity Unit (NTU). Semakin tinggi nilai kekeruhan,
+semakin banyak partikel yang terdapat di dalam air sehingga proses pengolahan
+perlu mendapatkan perhatian lebih lanjut.
+
+Pemantauan kekeruhan penting karena perubahan nilai kekeruhan dapat menunjukkan
+perubahan kondisi air baku maupun penurunan efektivitas proses koagulasi,
+flokulasi, sedimentasi, atau filtrasi. Pada \textit{dashboard}, data kekeruhan disajikan
+dalam bentuk nilai terbaru, grafik perubahan terhadap waktu, dan riwayat
+pengukuran sehingga operator dapat memantau kecenderungan perubahan parameter
+tersebut.
+
+\subsection{Total Dissolved Solids (TDS)}
+
+\textit{Total Dissolved Solids} (TDS) merupakan parameter yang menunjukkan
+jumlah zat padat terlarut di dalam air. Nilai TDS dipengaruhi oleh berbagai
+mineral, garam, maupun senyawa lain yang larut dalam air dan umumnya dinyatakan
+dalam satuan miligram per liter (mg/L) atau \textit{parts per million} (ppm).
+
+Pemantauan TDS membantu operator memperoleh gambaran mengenai perubahan
+kandungan zat terlarut selama proses pengolahan. Meskipun TDS tidak secara
+langsung menunjukkan kualitas mikrobiologi air, perubahan nilai TDS dapat
+menjadi indikator perubahan karakteristik air baku maupun kondisi proses
+pengolahan. Oleh karena itu, parameter ini menjadi salah satu informasi yang
+ditampilkan pada dashboard monitoring.
+
+\subsection{Pemanfaatan Parameter pada Dashboard}
+
+Ketiga parameter tersebut ditampilkan secara terintegrasi pada
+\textit{dashboard} dalam bentuk kartu ringkasan, grafik tren, analitik sederhana, serta
+tabel riwayat pengukuran. Penyajian informasi secara visual membantu operator
+membandingkan kondisi antarparameter, mengamati perubahan yang terjadi dalam
+periode tertentu, serta mengidentifikasi indikasi kondisi yang memerlukan
+perhatian atau tindakan lebih lanjut.
+
+Selain menampilkan nilai hasil pengukuran, \textit{dashboard} juga menerima hasil evaluasi
+kepatuhan terhadap batas parameter yang ditentukan oleh \textit{backend}. Dengan demikian,
+\textit{dashboard} berperan sebagai media visualisasi informasi, sedangkan proses
+penentuan status kepatuhan tetap dilakukan pada sisi \textit{backend} sesuai konfigurasi
+yang digunakan sistem.
+
+\section{Internet of Things untuk Pemantauan Air}
+
+\textit{Internet of Things} (IoT) merupakan konsep yang menghubungkan berbagai
+perangkat fisik, seperti sensor dan aktuator, ke jaringan komunikasi sehingga
+perangkat tersebut dapat mengumpulkan, mengirimkan, dan menerima data secara
+otomatis. Pada sistem pemantauan, IoT memungkinkan proses pengambilan data
+dilakukan secara berkelanjutan tanpa memerlukan pencatatan manual oleh operator.
+Data yang diperoleh dari sensor kemudian dikirim ke sistem pengolahan untuk
+disimpan, dianalisis, maupun ditampilkan pada antarmuka pengguna
+\autocite{ismail2022iot}.
+
+Dalam sistem pemantauan kualitas air, perangkat IoT umumnya digunakan untuk
+mengukur berbagai parameter, seperti pH, kekeruhan, suhu, maupun
+\textit{Total Dissolved Solids} (TDS). Sensor melakukan pengukuran secara
+berkala, kemudian hasil pengukuran dikirim melalui jaringan komunikasi menuju
+\textit{server} atau layanan komputasi yang bertugas mengolah data. Pendekatan tersebut
+memungkinkan operator memperoleh informasi kondisi sistem secara lebih cepat
+dibandingkan proses pengukuran dan pencatatan manual.
+
+Secara umum, arsitektur sistem pemantauan berbasis IoT terdiri atas empat
+lapisan utama, yaitu lapisan akuisisi data (\textit{sensing layer}), lapisan
+komunikasi (\textit{communication layer}), lapisan pengolahan data
+(\textit{processing layer}), dan lapisan aplikasi (\textit{application layer}),
+sebagaimana ditunjukkan pada Gambar~\ref{fig:arsitektur-iot}. Lapisan akuisisi
+bertugas memperoleh data dari sensor, lapisan komunikasi mengirimkan data
+menuju server, lapisan pengolahan melakukan penyimpanan dan analisis data,
+sedangkan lapisan aplikasi menyajikan informasi kepada pengguna melalui
+dashboard atau antarmuka lainnya \autocite{ismail2022iot}.
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[
+      node distance=0.9cm,
+      layer/.style={
+        draw, rounded corners, minimum width=8.5cm, minimum height=1.4cm,
+        align=center, font=\small
+      },
+      arr/.style={-{Latex[length=2.5mm]}, thick}
+    ]
+    \node[layer, fill=blue!8] (sensing) {
+      \textbf{Sensing Layer} \\
+      Sensor pH, kekeruhan, TDS pada unit ESP32
+    };
+    \node[layer, fill=blue!15, below=of sensing] (comm) {
+      \textbf{Communication Layer} \\
+      Transmisi data melalui WiFi menuju server
+    };
+    \node[layer, fill=blue!22, below=of comm] (proc) {
+      \textbf{Processing Layer} \\
+      Penyimpanan, pengolahan, dan penyediaan data melalui REST API (\textit{Backend})
+    };
+    \node[layer, fill=blue!30, below=of proc] (app) {
+      \textbf{Application Layer} \\
+      Visualisasi data pada \textit{dashboard} operator (\textit{Frontend})
+    };
+
+    \draw[arr] (sensing) -- (comm);
+    \draw[arr] (comm) -- (proc);
+    \draw[arr] (proc) -- (app);
+  \end{tikzpicture}
+  \caption{Arsitektur Empat Lapisan Sistem Pemantauan Berbasis IoT}
+  \label{fig:arsitektur-iot}
 \end{figure}
 
-Gambar, grafik, atau ilustrasi harus memiliki keterangan atau judul (\textit{caption}) yang menjelaskan isi gambar tersebut. 
-Secara horisontal, gambar dan judulnya diposisikan di tengah. Nomor gambar tidak diakhiri tanda baca.
-Judul gambar diletakkan di bawah gambar dan ditulis dengan huruf kecil kecuali huruf pertama pada kalimat judul. 
-Kalimat judul yang panjang dapat ditulis dalam beberapa baris seperti pada Gambar \ref{fig:jaringan2}.
+Berbagai penelitian telah memanfaatkan IoT untuk sistem pemantauan kualitas air.
+Penelitian oleh \textcite{kumar2024iot} menunjukkan penggunaan sensor pH,
+kekeruhan, dan TDS sebagai parameter utama dalam pemantauan kualitas air secara
+\textit{real-time}. Data hasil pengukuran dikumpulkan secara otomatis sehingga
+perubahan kondisi air dapat diketahui lebih cepat dibandingkan metode
+konvensional yang mengandalkan pencatatan manual.
 
-Ukuran gambar yang ditampilkan dapat diatur dengan mengubah nilai \textit{width} dalam sintaks \textit{includegraphics}. 
-Gambar \ref{fig:jaringan} memiliki lebar 70\% dari lebar teks, sedangkan Gambar \ref{fig:jaringan2} memiliki lebar 90\% dari lebar teks.
- 
+Pada sistem otomasi dosis WTP ITB Jatinangor, frontend tidak berkomunikasi
+langsung dengan perangkat sensor maupun protokol komunikasi yang digunakan oleh
+perangkat IoT. Seluruh data yang ditampilkan pada dashboard diperoleh dari
+backend melalui REST API setelah melalui proses akuisisi, penyimpanan, dan
+pengolahan data. Dengan pendekatan tersebut, frontend hanya berperan sebagai
+lapisan aplikasi yang bertugas menyajikan informasi kepada operator, sedangkan
+seluruh proses komunikasi dengan perangkat IoT menjadi tanggung jawab sistem
+backend.
 
-\begin{figure}[t] 
-  \caption{Contoh peletakan gambar dengan judul yang panjang sehingga ditulis dalam beberapa baris} 
-	\label{fig:jaringan2}
-    	\includegraphics[width=0.9\textwidth]{images/gambar1.png}
-\end{figure}
+Pemisahan tanggung jawab antara perangkat IoT, \textit{backend}, dan \textit{frontend} memberikan
+beberapa keuntungan, seperti kemudahan pengembangan, pemeliharaan sistem, serta
+pengurangan keterkaitan antar komponen. \textit{Backend} dapat mengelola proses
+pengumpulan data, validasi, dan pengolahan informasi tanpa bergantung pada
+implementasi antarmuka, sedangkan \textit{frontend} dapat berfokus pada penyajian data
+dan pengalaman pengguna. Arsitektur tersebut juga mempermudah pengembangan
+lanjutan apabila di masa mendatang terjadi perubahan perangkat sensor maupun
+mekanisme komunikasi yang digunakan.
 
-Pastikan gambar yang digunakan memiliki resolusi yang cukup tinggi agar tidak pecah atau buram saat dicetak. 
-Gambar umumnya tidak tajam dan tulisan tidak jelas atau kabur jika gambar tersebut:
-\begin{enumerate}[a.]
-  \item diperoleh dari hasil cropping pada suatu halaman buku atau situs web;
-  \item hasil pembesaran gambar yang gambar aslinya sebenarnya berukuran kecil; atau
-  \item disimpan dalam resolusi kecil
-\end{enumerate}
-Ketidakjelasan gambar ini dapat dilihat pada garis-garis diagram yang tidak tegas dan tulisan-tulisan dalam gambar yang tampak kabur dan kurang jelas terbaca.
+\section{Platform Penyajian Data Pemantauan}
 
-Untuk mendapatkan gambar yang tidak kabur (\textit{blur}), langkah-langkah berikut dapat digunakan:
-\begin{enumerate}[(a)]
-\item Hindari \textit{screenshot}. Gambar yang didapat di suatu pustaka atau referensi sebaiknya digambar ulang (tidak perlu sama persis), misalnya menggunakan PowerPoint, Canva, Figma, draw.io, atau yang lainnya.
-\item Jika diagram atau ilustrasi digambar menggunakan draw.io, saat gambar disimpan ke format PNG atau JPG (\textit{export as}), lakukan \textit{zoom} ke minimal 300\% (\textit{the default value is} 100\%). 
-\item Jika diagram digambar dengan menggunakan \texttt{PowerPoint} atau aplikasi yang mengolah gambar vektor lainnya, gambar dapat langsung disimpan asalkan resolusinya tinggi.
-\end{enumerate}
+Penyajian data pemantauan kepada pengguna dapat ditempuh melalui beberapa pendekatan yang telah berkembang dalam
+praktik industri maupun penelitian. Subbab ini meninjau cara kerja masing-masing pendekatan sebagai dasar
+pertimbangan pada analisis pemilihan solusi di Bab~\ref{chap:analisis-masalah}.
 
-\subsection{Penulisan Tabel}
-Format penulisan tabel hampir sama dengan format penulisan gambar. Bedanya adalah judul tabel diletakkan di atas tabel, bukan di bawah tabel seperti pada gambar.
-Ada tabel yang bisa dimuat dalam satu halaman (tabel pendek) dan ada tabel panjang yang yang tidak muat dalam satu halaman. Kedua jenis tabel tersebut disusun dengan cara yang berbeda.
-Jika tabel sangat panjang, gunakan paket \textit{longtable} untuk membuat tabel yang dapat terpotong ke halaman berikutnya.
-Namun, jika tabel dapat dimuat dalam satu halaman, gunakan lingkungan \textit{table} biasa, tidak menggunakan \textit{longtable}.
-Usahakan tabel dapat ditulis dalam satu halaman, tidak terpotong ke halaman berikutnya, jika memungkinkan.
+\subsection{Perkakas \textit{Business Intelligence}}
+Perkakas \textit{business intelligence} (BI) seperti Power BI dan Tableau bekerja dengan menghubungkan diri ke
+sumber data tabular, seperti basis data relasional atau berkas terstruktur, kemudian menyediakan kanvas visual
+tempat pengguna menyusun grafik dan laporan melalui konfigurasi tanpa penulisan kode. Data diperbarui melalui
+mekanisme penyegaran terjadwal maupun kueri langsung ke sumber data.
 
-\subsubsection{Penulisan Tabel Pendek}
-Contoh tabel pendek dapat dilihat pada Tabel \ref{tab:tabel1}, \ref{tab:tabel2}, dan \ref{tab:tabel3}. 
-Pada kedua table ini, tabel dan judulnya diposisikan di tengah secara horisontal dan 
-judul tabel diletakkan di atas tabel. Secara vertikal, tabel sebaiknya diletakkan di bagian atas atau bawah halaman.
+Kekuatan pendekatan ini terletak pada kematangan visualisasi, kemudahan penggunaan bagi pengguna non-teknis, dan
+kecepatan penyusunan laporan. Keterbatasannya, perkakas BI dirancang untuk analisis data dan bersifat satu arah,
+yaitu hanya membaca dan menyajikan data tanpa menyediakan kanal aksi bagi pengguna untuk mengubah keadaan sistem
+yang dipantau.
 
-Penyebutan judul tabel dalam teks menggunakan perintah \texttt{ref}, misalnya Tabel \ref{tab:tabel1}.
-Gunakan huruf kapital pada kata "Tabel" saat menyebutkan tabel dalam teks.
+\subsection{Platform IoT Siap Pakai}
+Platform IoT siap pakai bekerja dengan menerima data yang dikirimkan perangkat melalui protokol komunikasi
+tertentu, menyimpannya pada basis data internal platform, kemudian menyajikannya melalui \textit{dashboard} yang
+disusun dari widget bawaan.
 
-Tabel \ref{tab:tabel1} menggunakan paket \textit{tabularx} untuk mengatur lebar kolom secara fleksibel. 
-Selain itu, tabel ini juga menggunakan \textit{threeparttable} untuk menambahkan catatan kaki pada tabel 
-dan opsi \texttt{X} agar lebar kolom fleksibel menyesuaikan lebar tabel.
-Catatan kaki pada tabel ini menggunakan perintah \texttt{tablenotes} yang disediakan oleh paket \textit{threeparttable}.
-Catatan kaki pada tabel ini menggunakan perintah \texttt{\textbackslash footnotemark} dan \texttt{\textbackslash footnotetext} untuk menambahkan catatan kaki pada tabel.
+ThingSpeak mengorganisasi data ke dalam kanal (\textit{channel}), yaitu wadah data yang setiap bidangnya mewakili
+satu parameter. Penyiapannya cepat, tetapi struktur kanal bersifat kaku dan kustomisasi antarmuka sangat terbatas.
 
-Tabel \ref{tab:tabel2} menggunakan format standar \texttt{| l | c | r |}. 
-Tabel \ref{tab:tabel3} menggunakan lebar kolom tetap (\textit{fixed width}) menggunakan \texttt{p\{width\}}.
+Grafana bekerja sebagai lapisan visualisasi yang menghubungkan diri ke sumber data eksternal, umumnya basis data
+deret waktu. Grafana tidak menyimpan data secara mandiri, melainkan mengeksekusi kueri ke sumber data setiap kali
+panel dirender. Grafana unggul dalam visualisasi telemetri dan memiliki mekanisme \textit{alerting} berbasis
+ambang batas yang matang. Keterbatasannya, karena hanya berperan sebagai lapisan visualisasi, seluruh komponen
+lain seperti \textit{broker} pesan, basis data, dan manajemen perangkat harus dirakit secara terpisah. Selain itu,
+aksi tulis-balik dari antarmuka menuju perangkat tidak tersedia secara bawaan.
 
-\begin{table} 
-  \centering
-    \begin{threeparttable}[t] % threeparttable agar bisa menambahkan catatan kaki pada tabel
-    \caption{Contoh tabel yang menggunakan \texttt{tabularx} untuk mengatur lebar kolom secara fleksibel. 
-    Selain itu, tabel ini juga menggunakan \texttt{threeparttable} untuk menambahkan catatan kaki pada tabel 
-    dan opsi \texttt{X} agar lebar kolom fleksibel menyesuaikan lebar tabel.}
-    \label{tab:tabel1}
-    \begin{tabularx}{0.6\textwidth}{| c | X| l | r @{}|} % @{} removes extra space at edges, X makes the column flexible width
-	    \hline
-	    No & Nama 	& Satuan 		& Harga \\
-	    \hline
-	    1 & Buku 	& Exemplar	& 25000 \\
-	    2 & Komputer	& Unit		& 2500000 \\
-	    3 & Pensil	& Buah		& 118900 \\
-	    \hline
-	  \end{tabularx} 
-    \begin{tablenotes}
-      \footnotesize
-      \item \footnotemark[1]Tabel harga berdasarkan data tahun 2023.
-      \item \footnotemark[2]Sumber: \url{https://www.example.com}
-    \end{tablenotes}
-  \end{threeparttable}
+ThingsBoard merupakan platform IoT terpadu yang menggabungkan manajemen perangkat, penyimpanan data,
+\textit{dashboard}, mesin aturan (\textit{rule engine}), serta manajemen alarm yang dilengkapi mekanisme
+pengakuan. Platform ini juga menyediakan widget kendali yang memungkinkan pengguna mengirimkan perintah kembali ke
+perangkat. Cakupannya menjadikannya alternatif yang paling mendekati kebutuhan sistem pemantauan industri.
+Keterbatasannya, seluruh logika pemrosesan data diarahkan untuk berjalan di dalam mesin aturan platform, sehingga
+sistem yang telah memiliki lapisan pemrosesan sendiri perlu menyesuaikan diri dengan model data platform.
+
+\subsection{Pengembangan Antarmuka Web Mandiri}
+Pendekatan ketiga adalah membangun antarmuka web secara mandiri yang mengonsumsi layanan \textit{backend} melalui
+antarmuka pemrograman aplikasi. Antarmuka bertanggung jawab menarik data, mengelola kesegarannya, dan
+menyajikannya, sementara logika pemrosesan tetap berada pada \textit{backend}.
+
+Pendekatan ini menuntut usaha pengembangan yang lebih besar, tetapi memberikan kendali penuh atas alur kerja
+pengguna, logika penyajian yang bersifat khusus terhadap domain permasalahan, serta pola integrasi dengan
+\textit{backend} yang dikembangkan sendiri. Pendekatan ini umumnya dipilih ketika kebutuhan sistem melampaui
+visualisasi telemetri semata, misalnya ketika antarmuka perlu memfasilitasi aksi pengguna yang mengubah keadaan
+sistem atau menyajikan evaluasi berbasis regulasi yang bersifat spesifik.
+
+\section{Penelitian Terkait}
+
+Berbagai penelitian telah membahas penerapan teknologi untuk pemantauan kualitas air, mulai dari pengembangan
+perangkat \textit{Internet of Things} (IoT), sistem kendali berbasis SCADA, hingga penyajian data melalui
+antarmuka web. Subbab ini meninjau cara kerja penelitian-penelitian tersebut sekaligus mengidentifikasi kelebihan
+dan keterbatasannya, sebagai dasar penentuan posisi tugas akhir ini.
+
+\subsection{Tinjauan dan Kerangka Kerja Umum}
+\textcite{ismail2022iot} menyajikan tinjauan mengenai penerapan teknologi IoT pada sistem pengelolaan air. Kajian
+tersebut memetakan arsitektur sistem menjadi lapisan sensor, jaringan komunikasi, platform komputasi, serta
+\textit{dashboard} sebagai media visualisasi. Kelebihan penelitian ini terletak pada cakupannya yang luas dan
+kerangka arsitektur berlapis yang dapat dijadikan acuan perancangan. Keterbatasannya, pembahasan berhenti pada
+tataran arsitektur; lapisan aplikasi hanya disebut sebagai kotak fungsional tanpa penjelasan mengenai bagaimana
+antarmuka semestinya dirancang agar benar-benar mendukung kerja operator.
+
+\textcite{alshami2024iot} melakukan tinjauan komprehensif terhadap inovasi IoT dalam pengelolaan air dan air
+limbah. Kelebihannya, penelitian ini memetakan perkembangan mutakhir termasuk integrasi kecerdasan buatan pada
+sistem pemantauan air. Namun, sebagaimana kajian tinjauan pada umumnya, penelitian ini tidak menghadirkan
+implementasi konkret sehingga persoalan praktis pada lapisan antarmuka tidak terungkap.
+
+\subsection{Sistem Pemantauan Kualitas Air Berbasis IoT}
+\textcite{kumar2024iot} mengembangkan sistem pemantauan kualitas air berbasis IoT dengan parameter pH, kekeruhan,
+dan TDS. Sistem bekerja dengan mengumpulkan pembacaan sensor secara otomatis dan berkala, kemudian mengirimkannya
+ke platform pemrosesan untuk ditampilkan. Kelebihannya, penelitian ini membuktikan bahwa ketiga parameter tersebut
+memadai sebagai indikator utama kualitas air, yang menjadi dasar pemilihan parameter pada tugas akhir ini.
+Keterbatasannya, fokus penelitian berada pada pengembangan perangkat keras dan proses akuisisi data, sedangkan
+perancangan antarmuka pengguna tidak dibahas secara rinci.
+
+\textcite{forhad2024wtp} membangun sistem pemantauan kualitas air secara langsung pada instalasi pengolahan air.
+Sistem bekerja dengan mengintegrasikan sensor pH, oksigen terlarut, TDS, dan suhu, yang datanya dikirimkan ke
+platform terpusat berbasis komputasi awan melalui mekanisme kendali berbasis \textit{Programmable Logic
+Controller} (PLC). Kelebihannya, penelitian ini beroperasi pada instalasi nyata, bukan skala laboratorium, serta
+telah menyediakan peringatan waktu nyata, pencatatan riwayat, dan pemantauan jarak jauh. Keterbatasannya,
+penekanan penelitian berada pada keandalan akuisisi data dan arsitektur perangkat keras; aspek bagaimana informasi
+tersebut disajikan kepada operator, termasuk penanganan kondisi ketika data gagal diperbarui, tidak menjadi objek
+pembahasan.
+
+\textcite{rahu2023iot} menyusun kerangka kerja yang memadukan IoT dan pembelajaran mesin untuk analisis serta
+prediksi kualitas air. Kelebihannya, pendekatan prediktif memungkinkan antisipasi terhadap penyimpangan parameter
+sebelum benar-benar terjadi. Keterbatasannya, kompleksitas model prediktif menuntut ketersediaan data historis
+yang memadai, dan hasil prediksi tersebut tetap memerlukan antarmuka yang mampu mengomunikasikannya kepada
+operator secara dapat ditindaklanjuti, yang tidak menjadi cakupan penelitian tersebut.
+
+\subsection{Antarmuka Operator dan Pemantauan Berbasis Web}
+\textcite{low2022scada} menerapkan pemantauan dan pengendalian berbasis web pada sistem distribusi air skala
+laboratorium. Sistem bekerja dengan menyajikan status operasional secara terpusat sekaligus memungkinkan
+pengendalian jarak jauh melalui peramban. Kelebihannya, penelitian ini membuktikan bahwa antarmuka web mampu
+menangani interaksi dua arah, bukan sekadar visualisasi pasif, sehingga menjadi rujukan penting bagi perancangan
+kanal aksi operator pada tugas akhir ini. Keterbatasannya, pengujian dilakukan pada skala laboratorium sehingga
+belum menghadapi persoalan yang muncul pada instalasi nyata, seperti ketidakstabilan jaringan atau berhentinya
+pembaruan data sensor. Penelitian tersebut juga tidak membahas bagaimana antarmuka semestinya berperilaku ketika
+pengambilan data gagal, padahal aspek ini menentukan keandalan informasi yang menjadi dasar keputusan operator.
+
+\textcite{azhar2022pwa} menerapkan teknologi \textit{Progressive Web App} (PWA) pada sistem informasi kesehatan
+untuk meningkatkan aksesibilitas dan interaksi pengguna. Sistem bekerja dengan memanfaatkan \textit{service
+worker} sehingga aplikasi web dapat dipasang pada perangkat dan tetap tanggap meskipun kondisi jaringan tidak
+ideal. Kelebihannya, pendekatan ini terbukti memberikan pengalaman setara aplikasi \textit{native} tanpa
+memerlukan distribusi melalui toko aplikasi. Keterbatasannya, penerapannya berada pada domain kesehatan sehingga
+karakteristik kebutuhan operator industri, seperti pemantauan berkelanjutan dan penanganan kondisi kritis, belum
+teruji pada penelitian tersebut.
+
+\subsection{Posisi Tugas Akhir}
+Perbandingan antara penelitian terdahulu dengan tugas akhir ini ditunjukkan pada
+Tabel~\ref{tab:penelitian-terkait}.
+
+\begin{table}[htbp]
+\centering
+\caption{Perbandingan penelitian terkait}
+\label{tab:penelitian-terkait}
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{tabular}{|p{1.8cm}|p{2.8cm}|p{3.2cm}|p{3.2cm}|p{3cm}|}
+\hline
+\textbf{Penelitian} & \textbf{Cara Kerja} & \textbf{Kelebihan} & \textbf{Kekurangan} & \textbf{Celah yang Diisi} \\ \hline
+
+Ismail dkk. (2022) &
+Tinjauan arsitektur IoT berlapis untuk pengelolaan air. &
+Kerangka arsitektur menyeluruh sebagai acuan perancangan. &
+Lapisan aplikasi tidak dibahas secara rinci. &
+Merinci perancangan lapisan aplikasi sebagai antarmuka operator. \\ \hline
+
+Alshami dkk. (2024) &
+Tinjauan inovasi IoT pada pengelolaan air dan air limbah. &
+Memetakan perkembangan mutakhir secara komprehensif. &
+Tidak menghadirkan implementasi konkret. &
+Menghadirkan implementasi dan verifikasi fungsional. \\ \hline
+
+Kumar dkk. (2024) &
+Akuisisi otomatis parameter pH, kekeruhan, dan TDS berbasis IoT. &
+Memvalidasi ketiga parameter sebagai indikator utama. &
+Berfokus pada perangkat keras; antarmuka tidak dirinci. &
+Menyediakan visualisasi, analitik, dan riwayat parameter. \\ \hline
+
+Forhad dkk. (2024) &
+Sensor WTP terhubung PLC dan platform awan terpusat. &
+Beroperasi pada instalasi nyata dengan riwayat dan peringatan. &
+Tidak membahas penyajian data maupun kegagalan pembaruan data. &
+Merancang penanganan kondisi data kedaluwarsa. \\ \hline
+
+Rahu dkk. (2023) &
+Kerangka IoT dan pembelajaran mesin untuk prediksi kualitas air. &
+Memungkinkan antisipasi penyimpangan parameter. &
+Hasil prediksi belum dikomunikasikan melalui antarmuka operasional. &
+Menyajikan status kepatuhan yang dapat ditindaklanjuti operator. \\ \hline
+
+Low dkk. (2022) &
+Pemantauan dan kendali distribusi air berbasis web skala laboratorium. &
+Membuktikan kelayakan interaksi dua arah melalui peramban. &
+Skala laboratorium; tidak menangani kegagalan pengambilan data. &
+Mengembangkan antarmuka pada instalasi nyata dengan penanganan galat. \\ \hline
+
+Azhar dkk. (2022) &
+Penerapan PWA pada sistem informasi kesehatan. &
+Pengalaman setara aplikasi \textit{native} tanpa toko aplikasi. &
+Domain di luar pemantauan industri. &
+Mengadopsi PWA untuk pemantauan WTP lintas perangkat. \\ \hline
+
+\end{tabular}
 \end{table}
 
+Berdasarkan Tabel~\ref{tab:penelitian-terkait}, terlihat bahwa penelitian terdahulu didominasi oleh pengembangan
+perangkat IoT, akuisisi data sensor, maupun kerangka kerja analitik, sedangkan lapisan antarmuka umumnya
+diperlakukan sebagai keluaran akhir yang tidak dibahas secara mendalam. Secara khusus, belum ditemukan penelitian
+yang membahas bagaimana antarmuka semestinya berperilaku ketika data yang menjadi dasarnya tidak lagi mutakhir,
+padahal kondisi tersebut berpotensi menyebabkan operator mengambil keputusan yang keliru.
 
-
-
-\begin{table}[t] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
-  \caption{Tabel yang menggunakan format standar \texttt{| l | c | r |}}
-  \label{tab:tabel2}
-	\begin{tabular}{ | l | c | r | }
-	\hline
-	Nama 	& Satuan 		& Harga \\
-	\hline
-	Buku 	& Exemplar	& 25000 \\
-	Komputer	& Unit		& 2500000 \\
-	Pensil	& Buah		& 118900 \\
-	\hline
-	\end{tabular}
-\end{table}
-
-
-\begin{table}[t] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
-  \centering
-  \caption{Tabel yang lebar kolomnya dibuat tetap}
-  \label{tbl:tabel3}
-	\begin{tabular}{  p{0.2\textwidth} | p{0.2\textwidth} | p{0.2\textwidth}  }
-	\hline
-	\textbf{Nama} 	& \textbf{Satuan} 		& \textbf{Harga} \\
-	\hline
-	Buku 	& Exemplar	& 25000 \\
-	\emph{Komputer}	& Unit		& 2500000 \\
-	Pensil	& Buah		& 118900 \\
-	\hline
-	\end{tabular}
-\end{table}
-
-% -- Example of importing table from external file --
-\subsubsection{Mengimpor Tabel dari Berkas Eksternal}
-
-Untuk kerapian penulisan, tabel tidak harus ditulis di dokumen utama. Sebagai contoh, Tabel \ref{tab:tabel4} diimpor dari berkas eksternal \texttt{table/tabel1.tex} menggunakan perintah \texttt{input}. 
-Dengan demikian, jika tabel tersebut perlu diubah, cukup mengubah pada berkas eksternal tersebut tanpa perlu mengubah pada berkas dokumen utama ini.
-
-\input tables/tabel1.tex
-
-
-% -- Example of long table --
-\subsubsection{Tabel yang Sangat Panjang}
-Jika tabel terlalu panjang sehingga tidak muat dalam satu halaman, gunakan paket 
-\textit{longtable} untuk membuat tabel yang dapat terpotong ke halaman berikutnya, 
-seperti pada Tabel \ref{tab:long}. 
-
-\input tables/longtable1.tex
-
-\subsection{Penulisan Rumus atau Persamaan Matematika Menggunakan {\LaTeX} dan Penomorannya}
-Contoh rumus matematika dapat ditulis seperti pada Persamaan \ref{eq:contoh1} di bawah ini. 
-Penomoran persamaan diletakkan di sebelah kanan, dan rumus ditulis dalam mode \textit{display math}.
-\begin{equation}
-E = mc^2
-\label{eq:contoh1}
-\end{equation}
-\eqcaption{Persamaan Pertama}
-
-Contoh lain penulisan rumus matematika yang lebih kompleks dapat ditulis seperti pada Persamaan \ref{eq:rumus2}.
-Perlu diperhatikan bahwa jika rumus terdiri dari beberapa baris, nomor persamaan hanya diletakkan pada baris terakhir, bukan pada setiap baris.
-\begin{align}
-f(x) &= ax^2 + bx + c \notag \\ % tidak menampilkan nomor pada baris ini
-f'(x) &= \frac{d}{dx}(ax^2 + bx + c) \notag \\ % tidak menampilkan nomor pada baris ini
-      &= 2ax + b 
-      \label{eq:rumus2} % nomor hanya muncul pada baris terakhir
-\end{align}
-\eqcaption{Persamaan Kedua}
-
-Jika rumus terlalu panjang untuk ditulis dalam satu baris, gunakan lingkungan \textit{multline} seperti pada Persamaan \ref{eq:rumus3} di bawah ini.
-\begin{multline} 
-y = a_0 + a_1x + a_2x^2 + a_3x^3 + a_4x^4 + a_5x^5 + a_6x^6 + a_7x^7 \\
-    + a_8x^8 + a_9x^9 + a_{10}x^{10} \label{eq:rumus3}
-\end{multline}
-\eqcaption{Persamaan Ketiga}
-
-Jika ada penurunan rumus yang terdiri dari beberapa baris, namun tidak memerlukan penomoran pada setiap baris dan tidak masuk di daftar persamaan, gunakan lingkungan \textit{align*}, misalnya:
-
-\begin{align*} 
-S &= \sum_{i=1}^{n} i^2 \\
-  &= 1^2 + 2^2 + 3^2 + \cdots + n^2 \\
-  &= \frac{n(n + 1)(2n + 1)}{6}
-\intertext{Contoh lainnya adalah rumus untuk mencari nilai rata-rata fungsi $f(x)$ pada interval $[p, q]$:}
-\bar{f} &= \frac{1}{q - p} \int_{p}^{q} f(x) \, dx \\
-        &= \frac{1}{q - p} \int_{p}^{q} (ax^2 + bx + c) \, dx \\
-        &= \frac{1}{q - p} \left[ \frac{a}{3}x^3 + \frac{b}{2}x^2 + cx \right]_p^q \\
-        &= \frac{a(q^3 - p^3)}{3(q - p)} + \frac{b(q^2 - p^2)}{2(q - p)} + c \label{eq:rumus4}
-\end{align*}
-
-
-
-
-\subsection{Penulisan Kode Program, \textit{Script} atau \textit{Pseudocode}}
-Contoh penulisan kode program, \textit{script}, atau \textit{pseudocode} dapat dilihat seperti pada \textit{listing} \ref{lst:binary_iter}. 
-Gunakan paket \textit{listings} untuk menulis \textit{source code} dalam bahasa pemrograman tertentu. 
-Kode seperti ini disebut dengan istilah \textit{listing}. 
-Kode program, \textit{script}, atau \textit{pseudocode} yang relatif pendek dapat ditulis di dalam
-dokumen utama. Namun, jika kode programnya sangat panjang, sebaiknya ditulis di berkas terpisah dan diletakkan di lampiran.
-
-\subsection{Penulisan Algoritma}
-Contoh penulisan algoritma dapat dilihat pada Algoritma \ref{alg:binary-search}. Ada beberapa paket yang dapat digunakan untuk menulis algoritma,
-misalnya \textit{algorithm2e}, \textit{algorithmic}, dan \textit{algpseudocode}. 
-Pada contoh ini digunakan paket \textit{algorithmic} untuk menulis algoritma. Setiap paket memiliki sintaks yang berbeda-beda.
-Oleh karena itu, pelajari dokumentasi paket yang digunakan untuk menulis algoritma.
-
-
-\input{listings/binary-search-python.tex}
-
-
-\input{algorithms/binary-search-alg.tex}
-
-
-
+Tugas akhir ini menempatkan diri pada celah tersebut, yaitu perancangan dan implementasi \textit{frontend
+dashboard} yang tidak hanya memvisualisasikan telemetri, tetapi juga menyediakan kanal aksi operator (pengakuan
+alarm dan penyesuaian \textit{offset} dosis), menyajikan evaluasi kepatuhan terhadap regulasi nasional, serta
+menangani secara eksplisit kondisi ketika data gagal diperoleh atau telah kedaluwarsa.

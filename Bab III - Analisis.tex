@@ -1,37 +1,244 @@
-% ============================================================================================
-% BAB III ANALISIS MASALAH
-% Pembagian subbab tidak rigid dan dapat bervariasi. Bab ini minimal berisi analisis kebutuhan
-% fungsional dan nonfungsional, analisis berbagai alternatif solusi yang dapat ditawarkan, dan
-% metode pemilihan solusi yang diusulkan.
-% ============================================================================================
 \cleardoublepage
 \chapter{ANALISIS MASALAH}
 \label{chap:analisis-masalah}
-Bab ini membahas analisis masalah yang ada pada sistem saat ini, analisis kebutuhan yang diperlukan
-untuk menyelesaikan masalah tersebut, serta analisis pemilihan solusi yang diusulkan. Secara garis besar,
-bab ini membahas hal-hal berikut:
-\begin{enumerate}[1.]
-    \item Deskripsi hasil analisis dari persoalan yang sedang ditangani dalam TA;
-    \item Penjelasan tentang solusi yang ditawarkan (dapat berupa algoritma, konsep desain, formula, atau gabungannya) 
-    pada level konsep dan detail yang cukup untuk merealisasikan solusinya; dan
-    \item Penjelasan tentang pendekatan yang dipilih dalam menyelesaikan persoalan TA.
-\end{enumerate}
-Subbab-subbab dalam bab ini dapat disesuaikan dengan kebutuhan topik TA yang dibahas. Berikut adalah contoh pembagian subbab
-yang dapat digunakan sebagai referensi (judul subbab dapat diubah sesuai dengan hal yang hendak dibahas dalam subbab tersebut).
+
+Bab ini menganalisis kondisi pemantauan \textit{Water Treatment Plant} (WTP) saat ini, 
+ruang lingkup \textit{frontend}, identifikasi masalah dan kebutuhan operator, 
+serta dasar pemilihan solusi pengembangan \textit{dashboard} berbasis web.
 
 \section{Analisis Kondisi Saat Ini}
-Menurut \textcite{laudon2020}, gambarkan terlebih dahulu model konseptual sistem yang ada saat ini. Model konseptual ini berisi berbagai komponen atau subsitem dan interaksi antarsubsistem tersebut. Setelah itu, berikan penjelasan tentang masalah yang ada pada sistem tersebut. Paragraf berikut berisi contoh penjabaran masalah sistem informasi fasilitas kesehatan untuk pasien \autocite{pressman2019}. 
-\section{Analisis Kebutuhan}
-\lipsum[4]
-\subsection{Identifikasi Masalah Pengguna}
-\lipsum[5]
-\subsection{Kebutuhan Fungsional}
-\lipsum[6]
-\subsection{Kebutuhan Nonfungsional}
-\lipsum[7]
+Pada operasional WTP konvensional, pemantauan kualitas air masih mengandalkan 
+instrumen fisik yang terpisah, pengamatan visual, dan pencatatan manual oleh operator. 
+Pola ini mengharuskan operator untuk melakukan perbandingan data secara manual 
+di lapangan. Hal tersebut tidak hanya meningkatkan beban kognitif, tetapi juga 
+memperlambat respons operator terhadap perubahan parameter kritis seperti pH, kekeruhan, 
+dan \textit{Total Dissolved Solids} (TDS). 
+
+Keterlambatan dalam mengenali perubahan parameter ini berdampak langsung pada 
+pengambilan keputusan terkait penyesuaian dosis bahan kimia yang akan diberikan, seperti 
+kaporit dan \textit{Polyaluminium Chloride} (PAC). Selain itu, pencatatan riwayat 
+dan log \textit{alarm} yang tidak terpusat dalam satu alur visual menyulitkan operato dalam proses 
+penelusuran akar masalah (\textit{troubleshooting}) ketika terjadi anomali pada sistem. 
+
+Saat ini, sistem otomasi yang lebih luas telah menyediakan lapisan sensor, mikrokontroler, 
+dan \textit{backend}. Oleh karena itu, masalah yang menjadi fokus tugas akhir ini adalah 
+belum tersedianya \textit{frontend} terpadu yang mampu menerjemahkan data mentah dari 
+\textit{backend} menjadi informasi visual dan antarmuka interaktif yang sesuai dengan 
+kebutuhan operasional operator.
+
+\section{Batas Sistem dan Pemangku Kepentingan}
+
+Aktor utama yang berinteraksi langsung dengan \textit{frontend} adalah operator WTP
+yang bertanggung jawab melakukan pemantauan kondisi instalasi serta mendukung
+proses operasional sistem otomasi dosis. Batas sistem \textit{frontend} dimulai dari
+konsumsi layanan REST API yang disediakan oleh \textit{backend}, kemudian data yang
+diterima diolah dan disajikan dalam bentuk antarmuka pengguna (\textit{User Interface})
+yang diakses melalui \textit{browser} pada perangkat operator. Dengan demikian,
+\textit{frontend} berperan sebagai media interaksi antara operator dengan sistem
+otomasi tanpa berhubungan secara langsung dengan perangkat lapangan.
+
+Ruang lingkup pengembangan \textit{frontend} tidak mencakup proses akuisisi data,
+pemrosesan telemetri, maupun mekanisme pengendalian perangkat keras. Perangkat
+keras sensor, modul ESP32, protokol komunikasi MQTT, arsitektur basis data,
+pemrosesan telemetri, serta algoritma kendali dosis fisik berada di luar batas
+pengembangan tugas akhir ini. Seluruh komponen tersebut diasumsikan telah
+berfungsi dengan baik sehingga pengembangan difokuskan pada implementasi
+\textit{frontend} yang mampu menyajikan informasi secara akurat, responsif, dan
+mudah digunakan oleh operator.
+
+\textit{Frontend} bertugas untuk mengelola dan menyajikan tiga kelompok data utama:
+\begin{enumerate}
+    \item Data telemetri, yang mencakup nilai pH, kekeruhan, dan TDS, baik secara
+    terkini (\textit{real-time}) maupun historis;
+    \item Data operasional, yang meliputi persentase level tangki bahan kimia,
+    status pompa dosis, log alarm, dan nilai parameter \textit{offset} dosis; serta
+    \item Data autentikasi, yang mengatur status sesi (\textit{session}) dan tingkat
+    otorisasi profil operator.
+\end{enumerate}
+
+Berdasarkan ketiga kelompok data tersebut, \textit{frontend} menghasilkan berbagai
+bentuk keluaran yang mendukung aktivitas pemantauan operator. Keluaran tersebut
+meliputi ringkasan kondisi sistem dalam bentuk visual, grafik historis, indikator
+status pompa dan tangki bahan kimia, notifikasi atau peringatan visual ketika
+terjadi kondisi abnormal, serta fitur ekspor data pengukuran dalam format dokumen.
+Selain menyajikan informasi, \textit{frontend} juga meneruskan permintaan interaksi
+operator, seperti pengaturan \textit{offset} dosis maupun pengakuan (\textit{acknowledgement})
+alarm, kepada \textit{backend} melalui REST API sehingga perubahan yang dilakukan
+operator dapat diproses oleh sistem.
+
+\section{Identifikasi Masalah Pengguna}
+\label{sec:masalah-pengguna}
+Berdasarkan analisis kondisi saat ini, masalah pengguna yang perlu diselesaikan
+oleh antarmuka sistem dirumuskan sebagai berikut:
+\begin{enumerate}
+    \item Operator belum memiliki layar pemantauan terpusat untuk memahami 
+    kondisi WTP secara holistik dan cepat.
+    \item Operator kesulitan membedakan validitas data, terutama untuk mengenali 
+    mana data yang akurat, sedang memuat (\textit{loading}), gagal diperoleh 
+    (\textit{error}), atau kedaluwarsa akibat hilangnya koneksi sensor.
+    \item Peninjauan tren kualitas air memerlukan visualisasi grafik dengan fitur 
+    penyaringan waktu yang fleksibel dan kemampuan ekspor data untuk pelaporan.
+    \item Interaksi kritis seperti penanganan alarm dan pengubahan \textit{offset} dosis 
+    memerlukan proteksi hak akses dan umpan balik (\textit{feedback}) antarmuka yang jelas 
+    agar tidak terjadi kesalahan operasional.
+    \item Operator memiliki mobilitas tinggi sehingga \textit{dashboard} harus 
+    dapat diakses dan menyesuaikan tampilan pada berbagai ukuran layar perangkat.
+\end{enumerate}
+
+\section{Kebutuhan Fungsional}
+\label{sec:kebutuhan-fungsional}
+Untuk menyelesaikan masalah pengguna yang telah diidentifikasi pada
+Subbab~\ref{sec:masalah-pengguna}, kebutuhan fungsional \textit{frontend} dirumuskan pada
+Tabel~\ref{tab:kebutuhan-fungsional}. Kolom "Masalah" menunjukkan
+keterkaitan setiap kebutuhan dengan masalah pengguna yang diidentifikasi
+pada Subbab~\ref{sec:masalah-pengguna}.
+
+\begin{table}[H]
+\centering
+\caption{Kebutuhan fungsional \textit{frontend}}
+\label{tab:kebutuhan-fungsional}
+\begin{tabular}{|p{1.3cm}|p{10.5cm}|p{1.4cm}|}
+\hline
+\textbf{ID} & \textbf{Kebutuhan} & \textbf{Masalah} \\
+\hline
+KF-01 & Sistem menyediakan fitur \textit{login}, \textit{logout}, dan pembatasan akses halaman. & M2 \\
+\hline
+KF-02 & Sistem menampilkan ringkasan kepatuhan batas aman dan nilai parameter kualitas air terkini. & M1 \\
+\hline
+KF-03 & Sistem memvisualisasikan level tangki bahan kimia dan indikator status pompa dosis. & M4 \\
+\hline
+KF-04 & Sistem memberikan peringatan visual ketika data telemetri tidak tersedia atau telah melewati batas waktu pembaruan (kedaluwarsa). & M2, M4 \\
+\hline
+KF-05 & Sistem menyajikan grafik, statistik dasar, dan riwayat historis untuk parameter pH, kekeruhan, dan TDS. & M3 \\
+\hline
+KF-06 & Sistem menyediakan penyaringan rentang waktu data riwayat dan fitur ekspor ke dalam format CSV/XLSX. & M3 \\
+\hline
+KF-07 & Sistem menampilkan daftar alarm aktif dan historis terselesaikan, serta mendukung aksi pengakuan (\textit{acknowledge}) alarm. & M4 \\
+\hline
+KF-08 & Sistem menampilkan informasi pengaturan dosis saat ini dan menyediakan form untuk memberikan input \textit{offset} dosis yang valid. & M4 \\
+\hline
+KF-09 & Sistem menyediakan navigasi yang intuitif untuk perpindahan antartampilan \textit{dashboard}, detail sensor, riwayat, alarm, dan pengaturan pompa. & M1, M3 \\
+\hline
+\end{tabular}
+\end{table}
+
+Daftar kebutuhan fungsional akan menjadi acuan utama dan diselaraskan 
+dengan struktur \textit{route}, desain komponen, serta kontrak API pada tahap implementasi.
+
+\section{Kebutuhan Nonfungsional}
+Kebutuhan nonfungsional mendefinisikan atribut kualitas dan batasan arsitektur 
+dari \textit{frontend} yang akan dibangun. Kebutuhan tersebut terdiri atas:
+\begin{enumerate}
+    \item \textbf{Responsivitas UI:} Antarmuka harus bersifat responsif (\textit{responsive design}) 
+    sehingga tetap proporsional dan mudah digunakan, baik pada layar \textit{desktop} di 
+    ruang kontrol maupun pada perangkat bergerak saat operator berpatroli.
+    \item \textbf{Keandalan Presentasi (UI/UX):} Antarmuka harus secara tangguh menangani 
+    berbagai status pengambilan data, termasuk memberikan indikator \textit{loading}, 
+    pesan \textit{error} yang jelas, serta penanda visual untuk sesi atau data sensor yang terputus.
+    \item \textbf{Kemudahan Pemeliharaan (\textit{Maintainability}):} Basis kode harus dibangun 
+    dengan arsitektur komponen yang dapat digunakan kembali (\textit{reusable components}) 
+    dan menggunakan TypeScript untuk menjamin keamanan tipe data (\textit{type safety}) 
+    sejak tahap kompilasi.
+    \item \textbf{Kemudahan \textit{Deployment}:} Aplikasi harus dapat dibangun (\textit{build}) 
+    dengan mudah untuk dipasang pada infrastruktur \textit{cloud}, serta mengadopsi 
+    teknologi \textit{Progressive Web App} (PWA) agar dapat diinstal layaknya aplikasi lokal.
+\end{enumerate}
 
 \section{Analisis Pemilihan Solusi}
-\subsection{Alternatif Solusi}
-\lipsum[8]
+
+Persoalan yang teridentifikasi pada subbab sebelumnya, yaitu belum tersedianya antarmuka terpadu bagi operator, 
+pada dasarnya dapat diselesaikan melalui beberapa pendekatan yang berbeda. Sebelum memutuskan untuk membangun 
+antarmuka secara mandiri, dilakukan analisis terhadap solusi-solusi siap pakai (\textit{off-the-shelf}) yang 
+telah tersedia, baik berupa perkakas \textit{business intelligence} maupun platform IoT. Analisis ini penting 
+untuk memastikan bahwa keputusan membangun sistem sendiri didasarkan pada kebutuhan yang tidak dapat dipenuhi 
+solusi eksisting, bukan sekadar preferensi teknis.
+
+\subsection{Kriteria Evaluasi Solusi}
+Kriteria evaluasi diturunkan langsung dari kebutuhan fungsional dan nonfungsional yang telah dirumuskan, yaitu:
+\begin{enumerate}
+    \item \textbf{Visualisasi telemetri dan riwayat (KF-02, KF-05, KF-06).} Kemampuan menyajikan nilai terkini, 
+    grafik tren, riwayat data deret waktu, serta ekspor laporan.
+    
+    \item \textbf{Interaksi dua arah operator (KF-07, KF-08).} Kemampuan operator melakukan aksi yang mengubah 
+    keadaan sistem, yaitu pengakuan alarm dan pengiriman nilai \textit{offset} dosis dengan validasi masukan.
+    
+    \item \textbf{Logika domain spesifik (KF-02, KF-04).} Kemampuan menyajikan evaluasi kepatuhan parameter 
+    terhadap Permenkes No.~2 Tahun 2023 serta penanganan kondisi data kedaluwarsa sesuai risiko operasional.
+    
+    \item \textbf{Integrasi dengan \textit{backend} sistem.} Kemampuan mengonsumsi REST API yang dikembangkan 
+    pada subsistem \textit{backend} tugas akhir ini, termasuk algoritma penentuan dosis yang menjadi inti sistem.
+    
+    \item \textbf{Kemandirian operasional.} Ketiadaan ketergantungan pada lisensi berbayar per pengguna maupun 
+    layanan pihak ketiga yang dapat berubah kebijakannya.
+\end{enumerate}
+
+\subsection{Analisis Alternatif Solusi}
+Berdasarkan kriteria tersebut, dianalisis empat kategori solusi siap pakai yang lazim digunakan pada sistem
+pemantauan berbasis IoT, sebagaimana dirangkum pada Tabel~\ref{tab:komparasi-solusi}.
+
+\input{tables/longtable3.tex}
+
 \subsection{Analisis Penentuan Solusi}
-\lipsum[9]
+Berdasarkan Tabel~\ref{tab:komparasi-solusi}, dapat disimpulkan bahwa untuk kebutuhan pemantauan telemetri 
+semata, solusi siap pakai seperti Grafana maupun ThingsBoard secara umum lebih efisien dibandingkan pengembangan 
+antarmuka secara mandiri, karena tidak memerlukan penulisan kode dari awal. Namun, kebutuhan sistem pada tugas 
+akhir ini melampaui pemantauan telemetri semata, sehingga terdapat tiga pertimbangan yang menjadi dasar keputusan 
+untuk membangun antarmuka secara mandiri.
+
+Pertama, sistem otomasi dosis WTP yang dikembangkan pada tugas akhir ini memiliki subsistem \textit{backend} 
+tersendiri yang memuat logika penentuan dosis bahan kimia. Penggunaan platform IoT seperti ThingsBoard 
+akan menuntut logika tersebut dipindahkan ke dalam mesin aturan platform, atau menuntut data dipaksakan mengikuti 
+model data platform. Kedua kemungkinan tersebut menjadikan subsistem \textit{backend} yang menjadi inti sistem 
+otomasi kehilangan perannya. Dengan mengembangkan antarmuka secara mandiri, integrasi dilakukan langsung terhadap 
+REST API subsistem \textit{backend} sehingga pembagian tanggung jawab antarsubsistem tetap terjaga.
+
+Kedua, sistem memerlukan penyajian logika domain yang tidak tersedia sebagai fungsi bawaan pada platform mana pun, 
+yaitu evaluasi kepatuhan parameter kualitas air terhadap Permenkes No.~2 Tahun 2023 beserta representasi 
+visualnya, serta penanganan kondisi data kedaluwarsa yang dirancang untuk mencegah operator mengambil keputusan 
+berdasarkan pembacaan yang tidak mutakhir. Kedua kebutuhan tersebut menuntut kendali penuh atas perilaku dan 
+tampilan antarmuka.
+
+Ketiga, kebutuhan interaksi dua arah, yaitu pengakuan alarm dan pengiriman \textit{offset} dosis yang disertai 
+validasi masukan, menuntut alur kerja yang dirancang khusus mengikuti prosedur operasional WTP. Meskipun sebagian 
+platform menyediakan kemampuan serupa, alur kerjanya terikat pada paradigma widget yang disediakan platform dan 
+tidak dapat disesuaikan secara bebas dengan hasil analisis kebutuhan operator.
+
+Berdasarkan ketiga pertimbangan tersebut, tugas akhir ini mengimplementasikan \textit{frontend dashboard} yang 
+dikembangkan secara mandiri sebagai aplikasi web responsif. Perlu ditegaskan bahwa keputusan ini tidak menyiratkan 
+bahwa solusi siap pakai bersifat inferior. Untuk sistem yang kebutuhannya terbatas pada visualisasi telemetri dan 
+peringatan berbasis ambang batas, solusi siap pakai justru merupakan pilihan yang lebih tepat. Keputusan 
+pengembangan mandiri pada tugas akhir ini berlaku secara spesifik karena adanya kebutuhan integrasi dengan 
+subsistem \textit{backend} internal, logika domain yang bersifat khusus, serta alur interaksi operator yang 
+dirancang berdasarkan analisis kebutuhan.
+
+\subsection{Analisis Pemilihan Tumpukan Teknologi (\textit{Tech Stack})}
+Setelah platform aplikasi web ditetapkan, pemilihan tumpukan teknologi dilakukan secara spesifik untuk mengatasi kompleksitas 
+data telemetri dan kontrol dosis.
+
+\textbf{1. Next.js vs. Pendekatan React Tradisional} \\
+Meskipun aplikasi dapat dibangun menggunakan pustaka React standar (seperti \textit{Create React App} atau Vite), 
+\textit{framework} Next.js dipilih karena menyediakan arsitektur \textit{routing} bawaan dan manajemen tata letak 
+yang lebih terstruktur. Pembagian arsitektur berbasis komponen pada Next.js mempermudah pengisolasian logika UI 
+sehingga bagian grafik riwayat yang berat tidak akan memengaruhi performa komponen \textit{sidebar} navigasi. 
+
+\textbf{2. TanStack Query vs. \textit{State Management} Global (Redux/Context)} \\
+Data telemetri WTP (seperti pH dan kekeruhan) adalah \textit{server state} yang perubahannya terjadi di luar 
+jangkauan aplikasi \textit{frontend}. Penggunaan \textit{state management} tradisional seperti Redux atau React 
+Context murni akan membutuhkan penulisan kode tambahan yang sangat panjang (\textit{boilerplate}) hanya untuk 
+menangani status \textit{loading} dan \textit{error}. TanStack Query dipilih karena didesain khusus untuk sinkronisasi 
+data asinkron. Fitur \textit{background polling} yang dimilikinya memungkinkan \textit{dashboard} melakukan pembaruan 
+data secara otomatis (misalnya setiap 5 detik) tanpa menyela interaksi operator, sebuah fitur kritis untuk sistem pemantauan 
+\textit{real-time}.
+
+\textbf{3. TypeScript vs. JavaScript Standar} \\
+Kesalahan eksekusi antarmuka (\textit{runtime error}) pada sistem pengendalian bahan kimia (seperti \textit{offset} kaporit) 
+memiliki risiko operasional yang tinggi. Oleh karena itu, TypeScript dipilih menggantikan JavaScript standar. TypeScript 
+memberikan keamanan tipe data (\textit{type safety}) dengan mewajibkan pendefinisian kontrak antarmuka (\textit{interface contract}) 
+untuk setiap struktur JSON yang dikirim maupun diterima dari REST API. Pendekatan ini memungkinkan sebagian besar \textit{bug} terkait 
+manipulasi data terdeteksi sejak tahap kompilasi kode, bukan saat aplikasi sedang digunakan oleh operator.
+
+\subsection{Penentuan Solusi Akhir}
+Berdasarkan hasil analisis komparatif di atas, Tugas Akhir ini akan mengimplementasikan \textit{dashboard} pemantauan WTP 
+menggunakan platform aplikasi web responsif berstandar PWA. Sistem ini akan dibangun di atas ekosistem Next.js dengan bahasa 
+pemrograman TypeScript, serta memanfaatkan TanStack Query sebagai instrumen utama dalam melakukan orkestrasi \textit{server state} 
+antara \textit{frontend} dan REST API \textit{backend}.

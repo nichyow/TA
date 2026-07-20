@@ -1,0 +1,41 @@
+\begin{longtable}{p{1.2cm}p{2.6cm}p{4.2cm}p{4.2cm}p{1.4cm}}
+\caption{Skenario dan hasil pengujian fungsional \textit{frontend}} \label{tab:blackbox} \\
+\toprule
+\textbf{ID} & \textbf{Use Case} & \textbf{Skenario Pengujian} & \textbf{Hasil yang Diharapkan} & \textbf{Status} \\
+\midrule
+\endfirsthead
+
+\multicolumn{5}{c}{\tablename\ \thetable\ Skenario dan hasil pengujian fungsional \textit{frontend} (lanjutan)} \\
+\toprule
+\textbf{ID} & \textbf{Use Case} & \textbf{Skenario Pengujian} & \textbf{Hasil yang Diharapkan} & \textbf{Status} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{5}{r}{\textit{Bersambung ke halaman berikutnya.}} \\
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+FE-01 & Login & Operator memasukkan kredensial akun yang valid pada halaman login. & Sistem mengautentikasi pengguna dan mengarahkan operator ke halaman \textit{dashboard}. & \textit{Passed} \\
+FE-02 & Logout & Operator menekan tombol \textit{logout}. & Sesi pengguna berakhir dan operator diarahkan kembali ke halaman login. & \textit{Passed} \\
+FE-03 & Melihat \textit{Dashboard} & Operator membuka halaman \textit{dashboard} pemantauan. & \textit{Dashboard} menampilkan ringkasan kondisi sistem, status kepatuhan parameter, level tangki bahan kimia, dan status pompa dosis. & \textit{Passed} \\
+FE-04 & Melihat \textit{Dashboard} & Operator melihat informasi parameter kualitas air pada \textit{dashboard}. & Nilai pH, kekeruhan, dan TDS ditampilkan melalui komponen \texttt{ComplianceSummary} sebagai bagian dari daftar pemeriksaan kepatuhan parameter. & \textit{Passed} \\
+FE-05 & Melihat \textit{Dashboard} & Operator melihat ringkasan kepatuhan pada \textit{dashboard}. & Sistem menampilkan jumlah parameter aman, total parameter, dan persentase kepatuhan. & \textit{Passed} \\
+FE-06 & Melihat \textit{Dashboard} & Operator melihat visualisasi level tangki bahan kimia. & Sistem menampilkan level tangki PAC, kaporit, dan soda ash. & \textit{Passed} \\
+FE-07 & Melihat \textit{Dashboard} & Operator melihat status pompa dosis pada \textit{dashboard}. & Sistem menampilkan status pompa dosis. & \textit{Passed} \\
+FE-08 & Melihat \textit{Dashboard} & Sistem diuji ketika data telemetri tidak tersedia atau \textit{backend} menandai sistem \textit{offline}. & Notifikasi peringatan muncul ketika status \textit{dashboard} \textit{offline} atau data terbaru tidak tersedia. & \textit{Passed} \\
+FE-09 & Memantau Sensor & Operator membuka halaman sensor. & Sistem menampilkan parameter pH, kekeruhan, dan TDS dalam bagian yang terpisah. & \textit{Passed} \\
+FE-10 & Memantau Sensor & Operator melihat grafik tren pada halaman sensor. & Sistem menampilkan grafik tren untuk setiap parameter. & \textit{Passed} \\
+FE-11 & Memantau Sensor & Operator melihat ringkasan statistik sensor. & Sistem menampilkan nilai minimum, maksimum, dan rata-rata. & \textit{Passed} \\
+FE-12 & Melihat Riwayat Data & Operator membuka halaman riwayat dan memasukkan rentang waktu secara manual. & Sistem menampilkan data sesuai rentang waktu yang dipilih. & \textit{Passed} \\
+FE-13 & Melihat Riwayat Data & Operator memilih rentang cepat 24 jam, 7 hari, atau 30 hari. & Sistem menampilkan data historis sesuai rentang waktu yang dipilih. & \textit{Passed} \\
+FE-14 & Ekspor Laporan & Operator mengekspor data riwayat ke format CSV. & Sistem menghasilkan dan mengunduh laporan data riwayat dalam format CSV. & \textit{Passed} \\
+FE-15 & Ekspor Laporan & Operator mengekspor data riwayat ke format XLSX. & Sistem menghasilkan dan mengunduh laporan data riwayat dalam format XLSX. & \textit{Passed} \\
+FE-16 & Memantau Alarm & Operator membuka halaman alarm. & Sistem menampilkan daftar alarm dan menyediakan penyaring untuk membedakan alarm aktif dan alarm terselesaikan. & \textit{Passed} \\
+FE-17 & \textit{Acknowledge} Alarm & Operator menekan tombol \textit{acknowledge} pada alarm aktif. & Sistem memproses aksi dan alarm berpindah ke daftar \textit{resolved}. & \textit{Passed} \\
+FE-18 & Mengatur \textit{Offset} Pompa & Operator membuka halaman \textit{offset} pompa. & Sistem menampilkan daftar pompa beserta kalkulasi dosis dan kolom masukan \textit{offset} dalam satuan mL. & \textit{Passed} \\
+FE-19 & Mengatur \textit{Offset} Pompa & Operator mengisi nilai \textit{offset} dosis berupa angka valid. & Sistem menerima masukan angka dan mengirimkannya ke \textit{backend}. & \textit{Passed} \\
+FE-20 & Mengatur \textit{Offset} Pompa & Operator mengisi masukan \textit{offset} dengan nilai bukan angka. & Sistem tidak memproses pengiriman karena masukan tidak valid. & \textit{Passed} \\
+\end{longtable}

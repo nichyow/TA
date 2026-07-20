@@ -1,0 +1,29 @@
+\begin{minipage}{\textwidth}
+\begin{lstlisting}[caption={Kontrak antarmuka struktur data dan representasi objek respons untuk telemetri terkini}, label={lst:telemetry-latest}, frame=single, captionpos=t, language=JavaScript]
+// Definisi Antarmuka Data
+export interface TelemetryLatestResponse {
+  timestamp: string;      // Format ISO 8601
+  ph: number;
+  turbidity: number;
+  flowRate: number;
+  waterLevel: number;
+  pacDose: number;
+  chlorineDose: number;
+  pumpStatus: 'ON' | 'OFF';
+  alarmStatus: boolean;
+}
+
+// Representasi Objek Data Respons dari Backend
+{
+  "timestamp": "2026-07-06T08:30:00Z",
+  "ph": 7.2,
+  "turbidity": 4.8,
+  "flowRate": 120.5,
+  "waterLevel": 85.3,
+  "pacDose": 12.5,
+  "chlorineDose": 2.1,
+  "pumpStatus": "ON",
+  "alarmStatus": false
+}
+\end{lstlisting}
+\end{minipage}

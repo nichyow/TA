@@ -1,0 +1,42 @@
+\begin{minipage}{\textwidth}
+\begin{lstlisting}[caption={Kontrak antarmuka struktur data dan representasi objek respons untuk riwayat sensor}, label={lst:telemetry-history}, frame=single, captionpos=t, language=JavaScript]
+// Definisi Antarmuka Data
+export interface TelemetryHistoryItem {
+  timestamp: string;
+  ph: number;
+  turbidity: number;
+  flowRate: number;
+  waterLevel: number;
+  pacDose: number;
+  chlorineDose: number;
+}
+
+export interface TelemetryHistoryResponse {
+  data: TelemetryHistoryItem[];
+}
+
+// Representasi Objek Data Respons dari Backend
+{
+  "data": [
+    {
+      "timestamp": "2026-07-06T08:00:00Z",
+      "ph": 7.1,
+      "turbidity": 5.0,
+      "flowRate": 118.4,
+      "waterLevel": 84.7,
+      "pacDose": 12.3,
+      "chlorineDose": 2.0
+    },
+    {
+      "timestamp": "2026-07-06T08:05:00Z",
+      "ph": 7.2,
+      "turbidity": 4.8,
+      "flowRate": 120.5,
+      "waterLevel": 85.3,
+      "pacDose": 12.5,
+      "chlorineDose": 2.1
+    }
+  ]
+}
+\end{lstlisting}
+\end{minipage}

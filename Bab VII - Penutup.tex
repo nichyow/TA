@@ -1,10 +1,83 @@
 % ==========================================
-% BAB VII PENUTUP
+% BAB VII KESIMPULAN DAN SARAN
 % ==========================================
 \cleardoublepage
-\chapter{PENUTUP}
-\label{chap:penutup}
+\chapter{KESIMPULAN DAN SARAN}
+\label{chap:kesimpulan-saran}
+
 \section{Kesimpulan}
-Jelaskan secara detail langkah-langkah rencana selanjutnya, hal-hal yang diperlukan atau akan disiapkan, dan risiko dan mitigasinya, yang meliputi:
+Berdasarkan seluruh tahapan pengerjaan tugas akhir, mulai dari analisis kebutuhan, perancangan, implementasi, 
+hingga evaluasi, dapat ditarik beberapa kesimpulan sebagai berikut.
+
+\begin{enumerate}
+    \item \textit{Frontend dashboard} berbasis web untuk sistem otomasi dosis WTP ITB Jatinangor berhasil 
+    diimplementasikan dan diintegrasikan dengan layanan \textit{backend} melalui REST API. \textit{Dashboard} 
+    yang dibangun menyatukan informasi kualitas air (pH, kekeruhan, dan TDS), status kepatuhan parameter, level 
+    tangki bahan kimia, status pompa dosis, alarm, serta riwayat operasional ke dalam satu antarmuka pemantauan 
+    yang terpusat. Dengan demikian, persoalan tersebarnya informasi operasional pada sumber yang terpisah, 
+    sebagaimana dirumuskan pada Bab~\ref{chap:pendahuluan}, telah terjawab.
+
+    \item Antarmuka yang dikembangkan tidak hanya berfungsi sebagai media visualisasi, tetapi juga mendukung 
+    aksi operasional operator melalui kendali antarmuka yang terproteksi, yaitu pengakuan (\textit{acknowledge}) 
+    alarm, peninjauan riwayat dengan penyaringan rentang waktu, ekspor laporan dalam format CSV dan XLSX, serta 
+    pengiriman nilai \textit{offset} dosis sementara. Seluruh interaksi tersebut hanya dapat diakses setelah 
+    operator melalui proses autentikasi, baik menggunakan kredensial lokal maupun penyedia identitas pihak ketiga.
+
+    \item Persoalan risiko pengambilan keputusan berdasarkan data yang tidak valid ditangani melalui penanganan 
+    kondisi data yang eksplisit pada antarmuka. Sistem membedakan secara visual antara kondisi data sedang dimuat, 
+    data kosong, kegagalan pengambilan data, dan data kedaluwarsa, dengan komponen peringatan yang muncul ketika 
+    telemetri terbaru tidak tersedia atau sistem berada dalam kondisi \textit{offline}.
+
+    \item Hasil pengujian fungsional terhadap 20 skenario menunjukkan bahwa seluruh skenario berhasil dilalui 
+    dengan status \textit{passed}. Hasil tersebut memverifikasi bahwa kesembilan kebutuhan fungsional yang 
+    didefinisikan pada Bab~\ref{chap:analisis-masalah} telah terpenuhi, mencakup autentikasi, pemantauan 
+    \textit{dashboard}, analitik sensor, peninjauan riwayat dan ekspor laporan, penanganan alarm, serta interaksi 
+    \textit{offset} pompa.
+
+    \item Hasil pengujian usabilitas menggunakan instrumen \textit{System Usability Scale} (SUS) memperoleh skor 
+    75, yang melampaui target minimal 70 dan berada pada kategori \textit{good} serta \textit{acceptable}. Hasil 
+    ini mengindikasikan bahwa antarmuka yang dikembangkan dapat dipahami dan digunakan oleh operator sasaran, 
+    meskipun dengan catatan bahwa pengujian hanya melibatkan satu responden sehingga belum dapat digeneralisasi.
+
+    \item Kontribusi utama subsistem \textit{frontend} pada tugas akhir ini bukan pada penentuan keputusan 
+    kualitas air maupun perhitungan dosis bahan kimia, melainkan pada pengorganisasian data yang disediakan 
+    \textit{backend} menjadi alur kerja pemantauan yang dapat digunakan operator. Dengan memisahkan pemantauan 
+    ringkas, analitik sensor, peninjauan riwayat, penanganan alarm, dan intervensi dosis ke dalam halaman yang 
+    berbeda, antarmuka mengurangi kebutuhan operator untuk berpindah antar sumber informasi selama proses 
+    supervisi berlangsung.
+\end{enumerate}
+
 \section{Saran}
-asdfas
+Berdasarkan hasil evaluasi dan batasan yang telah diidentifikasi, terdapat beberapa saran yang dapat menjadi 
+arah pengembangan lebih lanjut terhadap subsistem \textit{frontend}.
+
+\begin{enumerate}
+    \item \textbf{Penerapan komunikasi dua arah yang persisten.} Mekanisme pengambilan data saat ini masih 
+    mengandalkan penarikan berkala (\textit{polling}) sehingga terdapat jeda antara kondisi aktual di lapangan 
+    dan tampilan pada antarmuka. Penerapan kanal komunikasi dua arah yang persisten dapat mempersingkat jeda 
+    tersebut, khususnya untuk kejadian yang membutuhkan respons segera seperti pemicuan alarm.
+
+    \item \textbf{Dukungan operasi luring melalui antrean mutasi.} Aksi pengakuan alarm dan pengiriman 
+    \textit{offset} dosis saat ini bergantung sepenuhnya pada ketersediaan layanan \textit{backend}. Penambahan 
+    mekanisme antrean mutasi luring (\textit{offline mutation queue}) memungkinkan aksi operator tetap tersimpan 
+    ketika koneksi terputus dan dikirimkan kembali secara otomatis setelah koneksi pulih. Kemampuan ini relevan 
+    mengingat area instalasi berpotensi memiliki titik buta sinyal nirkabel.
+
+    \item \textbf{Peningkatan kejelasan prioritas alarm.} Tingkat keparahan alarm dapat dibedakan secara visual 
+    dengan lebih tegas, misalnya melalui perbedaan warna maupun ikon antara alarm berkategori \textit{warning} 
+    dan \textit{critical}sehingga operator dapat menentukan prioritas penanganan dengan lebih cepat.
+
+    \item \textbf{Penambahan umpan balik konfirmasi pada aksi penting.} Berdasarkan pola jawaban pada pengujian 
+    usabilitas, aspek pemanduan pengguna masih menyisakan ruang perbaikan. Penambahan pesan konfirmasi yang lebih 
+    eksplisit pada aksi kritis, seperti pengakuan alarm dan pengiriman \textit{offset} dosis, dapat membantu 
+    operator memastikan bahwa aksinya telah berhasil diproses oleh sistem.
+
+    \item \textbf{Perluasan cakupan pengujian.} Pengujian usabilitas sebaiknya melibatkan jumlah responden yang 
+    lebih banyak agar hasilnya memiliki kekuatan generalisasi. Selain itu, pengujian lanjutan dapat diperluas 
+    untuk mengevaluasi keandalan antarmuka pada kondisi jaringan nyata di lingkungan instalasi, serta mengukur 
+    waktu respons operator dalam jangka panjang.
+
+    \item \textbf{Pengayaan visualisasi pada halaman utama.} Halaman \textit{dashboard} dapat dilengkapi dengan 
+    grafik tren ringkas sehingga operator dapat mengamati arah perubahan kondisi air secara langsung dari layar 
+    pemantauan utama tanpa perlu berpindah ke halaman analitik sensor.
+\end{enumerate}

@@ -1,0 +1,31 @@
+\begin{longtable}{p{2cm}p{2.5cm}p{4.2cm}p{5cm}}
+\caption{Perbandingan alternatif solusi terhadap kebutuhan sistem} \label{tab:komparasi-solusi} \\
+\toprule
+\textbf{Solusi} & \textbf{Karakteristik} & \textbf{Kelebihan} & \textbf{Keterbatasan terhadap Kebutuhan} \\
+\midrule
+\endfirsthead
+
+\multicolumn{4}{c}{\tablename\ \thetable\ Perbandingan alternatif solusi terhadap kebutuhan sistem (lanjutan)} \\
+\toprule
+\textbf{Solusi} & \textbf{Karakteristik} & \textbf{Kelebihan} & \textbf{Keterbatasan terhadap Kebutuhan} \\
+\midrule
+\endhead
+
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+Power BI & Perkakas \textit{business intelligence} untuk pelaporan dan analisis data. &
+Kemampuan visualisasi dan pelaporan yang matang; integrasi kuat dengan sumber data tabular; kurva belajar rendah bagi pengguna non-teknis. &
+Berorientasi pada analisis data historis dan bersifat satu arah (hanya membaca). Tidak menyediakan mekanisme aksi operator seperti pengakuan alarm maupun pengiriman perintah dosis ke sistem. Memerlukan lisensi per pengguna. \\ \midrule
+ThingSpeak & Platform IoT untuk pengumpulan dan visualisasi data sensor. &
+Penyiapan cepat; integrasi langsung dengan perangkat IoT; tersedia paket gratis untuk penggunaan terbatas. &
+Struktur kanal bersifat kaku dan kustomisasi antarmuka sangat terbatas. Paket gratis membatasi laju pengiriman pesan. Tidak memadai untuk alur kerja operator yang memerlukan aksi dan validasi masukan. \\ \midrule
+Grafana & Platform visualisasi dan \textit{alerting} untuk data deret waktu. &
+Sangat unggul dalam visualisasi telemetri; mekanisme \textit{alerting} berbasis ambang batas yang matang; bersifat sumber terbuka dan dapat dipasang mandiri. &
+Berfokus pada lapisan visualisasi dan tidak menyimpan data sendiri, sehingga seluruh komponen lain harus dirakit terpisah. Aksi tulis-balik dari antarmuka menuju sistem tidak tersedia secara bawaan dan memerlukan pengaya tambahan. \\ \midrule
+ThingsBoard & Platform IoT terpadu dengan manajemen perangkat, \textit{dashboard}, dan mesin aturan. &
+Menyediakan \textit{dashboard}, manajemen alarm dengan pengakuan, serta widget kendali untuk mengirim perintah ke perangkat. Merupakan alternatif paling mendekati kebutuhan sistem. &
+Membawa mesin aturan dan lapisan pemrosesan data sendiri, sehingga penggunaannya menuntut data sistem disesuaikan dengan model data platform. Hal ini menjadikan subsistem \textit{backend} beserta algoritma penentuan dosis yang dikembangkan pada tugas akhir ini menjadi redundan. Kustomisasi tampilan terbatas pada paradigma widget yang disediakan. \\
+\end{longtable}

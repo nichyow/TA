@@ -1,0 +1,111 @@
+\babel@toc {indonesian}{}\relax 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {I.1}{\ignorespaces Ilustrasi Umum Tahapan Proses \textit {Water Treatment}}}{1}{figure.caption.12}%
+\contentsline {figure}{\numberline {I.2}{\ignorespaces Diagram Perpipaan Eksisting WTP ITB Jatinangor dengan Titik Otomasi Dosing (Ditandai Lingkaran Merah)}}{2}{figure.caption.13}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\addvspace {10\p@ }
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {figure}{\numberline {II.1}{\ignorespaces Arsitektur Empat Lapisan Sistem Pemantauan Berbasis IoT}}{10}{figure.caption.14}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {IV.1}{\ignorespaces Alur tahapan penurunan kebutuhan fungsional menjadi rancangan antarmuka}}{27}{figure.caption.18}%
+\contentsline {figure}{\numberline {IV.2}{\ignorespaces Peta hasil pemetaan kebutuhan fungsional menjadi struktur halaman dan komponen antarmuka}}{29}{figure.caption.20}%
+\contentsline {figure}{\numberline {IV.3}{\ignorespaces \textit {Use Case Diagram} sistem monitoring WTP}}{32}{figure.caption.21}%
+\contentsline {figure}{\numberline {IV.4}{\ignorespaces Arsitektur aliran data (\textit {flow data}) pada \textit {frontend}}}{34}{figure.caption.22}%
+\contentsline {figure}{\numberline {IV.5}{\ignorespaces Alur validasi sesi dan penentuan akses rute}}{36}{figure.caption.23}%
+\contentsline {figure}{\numberline {IV.6}{\ignorespaces Rancangan purwarupa \textit {low-fidelity} halaman \textit {dashboard} utama}}{39}{figure.caption.24}%
+\contentsline {figure}{\numberline {IV.7}{\ignorespaces Rancangan purwarupa \textit {low-fidelity} halaman riwayat sensor}}{40}{figure.caption.25}%
+\contentsline {figure}{\numberline {IV.8}{\ignorespaces Rancangan purwarupa \textit {low-fidelity} halaman log alarm}}{41}{figure.caption.26}%
+\contentsline {figure}{\numberline {IV.9}{\ignorespaces Rancangan purwarupa \textit {low-fidelity} halaman analitik sensor}}{42}{figure.caption.27}%
+\contentsline {figure}{\numberline {IV.10}{\ignorespaces Rancangan purwarupa \textit {low-fidelity} halaman kendali pompa}}{43}{figure.caption.28}%
+\contentsline {figure}{\numberline {IV.11}{\ignorespaces Diagram sekuens aliran data pada pembaruan berkala dan invalidasi pasca-mutasi}}{45}{figure.caption.29}%
+\addvspace {10\p@ }
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {figure}{\numberline {V.1}{\ignorespaces Implementasi antarmuka halaman \textit {dashboard} utama}}{50}{figure.caption.31}%
+\contentsline {figure}{\numberline {V.2}{\ignorespaces Implementasi antarmuka halaman riwayat sensor}}{52}{figure.caption.32}%
+\contentsline {figure}{\numberline {V.3}{\ignorespaces Implementasi antarmuka halaman pusat alarm}}{53}{figure.caption.33}%
+\contentsline {figure}{\numberline {V.4}{\ignorespaces Implementasi antarmuka halaman analitik sensor}}{54}{figure.caption.34}%
+\contentsline {figure}{\numberline {V.5}{\ignorespaces Implementasi antarmuka halaman kendali \textit {offset} pompa}}{55}{figure.caption.35}%
+\contentsline {figure}{\numberline {V.6}{\ignorespaces Implementasi lapisan peringatan data kedaluwarsa}}{58}{figure.caption.36}%
+\addvspace {10\p@ }
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\addvspace {10\p@ }
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\addvspace {10\p@ }
